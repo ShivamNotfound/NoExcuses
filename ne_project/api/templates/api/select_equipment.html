@@ -7,7 +7,8 @@
 <body>
     <div id="search_bar">Search bar</div>
 
-    <form method="GET" action="">
+    <form method="post" action="/select_equipment/">
+        {% csrf_token %}
     <div>
         {% for equipment in equipments %}
         <label >
@@ -18,7 +19,7 @@
             {{equipment}}
         </div>
         </label>
-        <input type = "checkbox" value="{{equipment.name}}" name="{{equipment.id}}">
+        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}">
         {% empty %}
         <div>
             No records exists

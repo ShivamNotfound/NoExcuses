@@ -1,0 +1,21 @@
+{% load custom_tags %}
+<!DOCTYPE html>
+
+
+<html>
+    <head></head>
+    <body>
+        <div>Pick one from each</div>
+
+        <div>
+            {% for submuscle in submuscles %}
+            <div onclick="window.location.href=''">
+            <div>
+                {% get_workout_counts_submuscle muscle_id ids submuscle %}
+            </div>
+            <div>{{submuscle}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

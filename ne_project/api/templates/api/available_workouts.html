@@ -1,0 +1,21 @@
+{% load custom_tags %}
+<!DOCTYPE html>
+
+
+<html>
+    <head></head>
+    <body>
+        <div>Change equipments</div>
+
+        <div>
+            {% for muscle in muscles %}
+            <div onclick="window.location.href='{% url 'available_workouts_submuscle' muscle.id  %}'" style="border:1px black solid">
+            <div>
+                {% get_workout_counts muscle ids %}
+            </div>
+            <div>{{muscle}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

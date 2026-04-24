@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.views.decorators.csrf import csrf_protect
+from django.http import HttpResponse
 # Create your views here.
 from django.views import generic
-from .models import Equipment, MuscleGroup, Workout
+from .models import Equipment, MuscleGroup, Workout, SubMuscle
+from django.db.models import Count
 
 
 
@@ -13,19 +16,30 @@ class Home(generic.ListView):
     def get_context_object_name(self, object_list):
         return "muscles"
     
+@csrf_protect
 def equipment_selection(request):
-
-    if request.method == 'GET':
-        ids = list(request.GET.keys())
+    if request.method == 'POST':
+        ids = list(request.POST.keys())[1:]
         selected_equipments = Equipment.objects.filter(id__in = ids)
         workouts = Workout.objects.filter(equipment__in = selected_equipments)
         print(workouts)
-
+        request.session['workout_ids'] = list(workouts.values_list("id", flat=True))
+        return redirect("available_workouts")
     equipments = Equipment.objects.prefetch_related()
-
     context = {"equipments": equipments}
     return render(request, 'api/select_equipment.html', context)
 
+def available_workouts(request):
+    ids = request.session.get("workout_ids")
+    muscles = MuscleGroup.objects.prefetch_related()
+    context = {"muscles":muscles,"ids":ids}
+    return render(request,"api/available_workouts.html", context)
 
+def available_workouts_for_submuscle(request, muscle_id):
+
+    ids = request.session.get("workout_ids")
+    submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
+    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles}
+    return render(request, "api/available_workouts_submuscle.html", context)
 
 
