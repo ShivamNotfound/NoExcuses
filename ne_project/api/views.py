@@ -14,6 +14,7 @@ class Home(generic.ListView):
     def get_template_names(self):
         return "api/home.html"
     def get_context_object_name(self, object_list):
+        self.request.session = list(Workout.objects.all().values_list("id", flat=True))
         return "muscles"
     
 @csrf_protect
@@ -35,11 +36,18 @@ def available_workouts(request):
     context = {"muscles":muscles,"ids":ids}
     return render(request,"api/available_workouts.html", context)
 
-def available_workouts_for_submuscle(request, muscle_id):
-
+def available_workouts_for_submuscle(request, muscle_id, current = -1):
+    
     ids = request.session.get("workout_ids")
     submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
-    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles}
+    workouts = submuscles[0].workouts.all() if current == -1 else SubMuscle.objects.get(id = current).workouts.all()
+    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts}
     return render(request, "api/available_workouts_submuscle.html", context)
+
+def workout_page(request, workout_id):
+    workout = Workout.objects.get(id = workout_id)
+
+    context = {"workout":workout}
+    return render(request, "api/workout.html", context)
 
 

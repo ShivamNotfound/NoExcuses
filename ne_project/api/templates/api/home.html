@@ -7,7 +7,7 @@
     <div id="select_equipment_btn" onclick="window.location.href = '{% url 'select_equipment' %}'">Select Equipments</div> 
     <div>
         {% for muscle in muscles %}
-        <div>
+        <div onclick = "window.location.href='{% url 'available_workouts_submuscle' muscle.id %}'">
         <div>
             {{muscle.workouts.count}}
         </div>

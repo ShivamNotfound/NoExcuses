@@ -3,4 +3,6 @@ from . import views
 urlpatterns = [path("home/", views.Home.as_view(), name = "home"),
                path("select_equipment/", views.equipment_selection, name="select_equipment"),
                path("muscles/", views.available_workouts, name = "available_workouts"),
-               path("submuscles/<int:muscle_id>", views.available_workouts_for_submuscle, name="available_workouts_submuscle")]
+               path("submuscles/<int:muscle_id>/<int:current>/", views.available_workouts_for_submuscle, name="available_workouts_submuscle"),
+               path("submuscles/<int:muscle_id>/", views.available_workouts_for_submuscle, name="available_workouts_submuscle"),
+               path("workout/<int:workout_id>/", views.workout_page, name = "workout_page")]

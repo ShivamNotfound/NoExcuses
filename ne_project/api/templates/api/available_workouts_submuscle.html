@@ -9,11 +9,18 @@
 
         <div>
             {% for submuscle in submuscles %}
-            <div onclick="window.location.href=''">
+            <div onclick="window.location.href='{% url 'available_workouts_submuscle' muscle_id submuscle.id %}'">
             <div>
                 {% get_workout_counts_submuscle muscle_id ids submuscle %}
             </div>
             <div>{{submuscle}}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <div>
+            {% for workout in workouts_selected %}
+            <div onclick="window.location.href='{% url 'workout_page' workout.id %}'">
+                {{workout.name}}
             </div>
             {% endfor %}
         </div>
