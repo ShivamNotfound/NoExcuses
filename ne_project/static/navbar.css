@@ -1,0 +1,102 @@
+
+body{
+    margin:20px;
+    font-family:sans-serif;
+    font-size:14px;}
+#everything{
+    position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+#everything::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 50%;
+  background: radial-gradient(
+    circle at left top,
+    rgb(159, 156, 156),
+    transparent 90%
+  );
+  filter: blur(130px);
+}
+
+#nav_container{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+#nav_items{
+    display:flex;
+    justify-content: space-between;
+    border-left: rgba(75, 75, 75) 1px solid;
+    border-top:rgba(71, 71, 71) 1px solid;
+    /* width: 30%; */
+    /* flex-wrap:wrap; */
+    padding:10px;
+    background-color: rgba(0, 0, 0, 0.909);
+    color: rgba(123, 123, 123, 0.79);
+    border-radius: 40px;
+}
+.nav_item{
+    padding: 13px;
+    padding-left:34px;
+    padding-right:34px;
+    transition: 0.3s;
+    border-radius: 40px;
+    margin-left:5px;
+    margin-right:5px;
+}
+.nav_item:hover{
+    cursor: pointer;
+    background-color: rgb(30, 30, 30);
+}
+#logo_block{
+    padding:18px;
+    display:hidden;
+}
+#login_logout{
+    display: flex;
+    padding:5px;
+    border-left: rgb(82, 81, 81) 1px solid;
+    border-top:rgb(83, 82, 82) 1px solid;
+    background-color: rgba(0, 0, 0, 0.909);
+    color: rgba(224, 224, 224, 0.79);
+    border-radius: 40px;
+    transition: 0.3s ease;
+    justify-content: center;
+}
+#login_logout div{
+    padding:10px;
+    align-content: center;
+    border-radius:40px;
+    padding-left:20px;
+    padding-right:20px;
+}
+#login_logout div:hover{
+    cursor: pointer;
+    background-color: rgb(30, 30, 30);
+}
+
+#about{
+    padding-left:34px;
+    padding-right:34px;
+}
+
+.active{
+    padding: 13px;
+    padding-left:34px;
+    padding-right:34px;
+    transition: 0.3s;
+    border-radius: 40px;
+    background-color:rgb(18, 17, 17) ;
+    border-left: 1px rgb(73, 72, 72) solid;
+    border-bottom: 1px rgb(78, 77, 77) solid;
+    margin-left:5px;
+    margin-right:5px;
+    color:rgb(222, 219, 219);
+}

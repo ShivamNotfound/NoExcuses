@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-
-
-<html>
-    <head>
-
-    </head>
-    <body>
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
         <div>
             <div id="workout_heading">{{workout.name}}</div>
             <div>{{workout.description}}</div>
         </div>
-    </body>
-</html>
+{% endblock %}

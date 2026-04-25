@@ -1,15 +1,12 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
 {% load custom_tags %}
-<!DOCTYPE html>
-
-
-<html>
-    <head></head>
-    <body>
         <div>Pick one from each</div>
 
         <div>
             {% for submuscle in submuscles %}
-            <div onclick="window.location.href='{% url 'available_workouts_submuscle' muscle_id submuscle.id %}'">
+            <div onclick="window.location.href=`{% url 'available_workouts_submuscle' muscle_id submuscle.id %}`">
             <div>
                 {% get_workout_counts_submuscle muscle_id ids submuscle %}
             </div>
@@ -19,10 +16,9 @@
         </div>
         <div>
             {% for workout in workouts_selected %}
-            <div onclick="window.location.href='{% url 'workout_page' workout.id %}'">
+            <div onclick="window.location.href=`{% url 'workout_page' workout.id %}`">
                 {{workout.name}}
             </div>
             {% endfor %}
         </div>
-    </body>
-</html>
+{% endblock %}      

@@ -1,10 +1,7 @@
-<!DOCTYPE html>
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
 
-
-<html>
-
-<head></head>
-<body>
     <div id="search_bar">Search bar</div>
 
     <form method="post" action="/select_equipment/">
@@ -28,6 +25,4 @@
     </div>
     <button type = "submit">Done</button>
     </form>
-
-</body>
-</html>
+{% endblock %}

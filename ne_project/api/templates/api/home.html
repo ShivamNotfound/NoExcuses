@@ -1,17 +1,17 @@
-<!DOCTYPE html>
 
-<html>
 
-<head></head>
-<body>
-    <div id="select_equipment_btn" onclick="window.location.href = '{% url 'select_equipment' %}'">Select Equipments</div> 
-    <div>
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'api/home.css' %}">
+   <center> <div id="select_equipment_btn" onclick="window.location.href = `{% url 'select_equipment' %}`"> Add Equipment</div> </center>
+    <div id="container">
         {% for muscle in muscles %}
-        <div onclick = "window.location.href='{% url 'available_workouts_submuscle' muscle.id %}'">
-        <div>
+        <div class="muscles" onclick = "window.location.href=`{% url 'available_workouts_submuscle' muscle.id %}`">
+        <div class="muscle_count">
             {{muscle.workouts.count}}
         </div>
-        <div>
+        <div class="muscle_name">
             {{muscle.name}}
         </div>
         </div>
@@ -21,5 +21,4 @@
         </div>
         {% endfor %}
     </div>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'navbar.css' %}"> 
+</head>
+<body>
+    <div id="everything">
+    <div id="nav_container">
+        <div id="logo_block" class="nav_part">
+            
+        </div>
+        <div id="nav_items" class="nav_part">
+            <div class="{% if request.resolver_match.url_name == 'home' %}active{% else %}nav_item{% endif %}" onclick="window.location.href=`{% url 'home' %}`">Home</div>
+            <div class="{% if request.resolver_match.url_name == 'select_equipment' %}active{% else %}nav_item{% endif %}" onclick="window.location.href=`{% url 'select_equipment' %}`">Equipments</div>
+            <div class="{% if request.resolver_match.url_name == 'about' %}active{% else %}nav_item{% endif %}" id="about">About</div>
+            <div class="{% if request.resolver_match.url_name == 'contacts' %}active{% else %}nav_item{% endif %}">Contacts</div>
+        </div>
+        <div id="login_logout" class="nav_part">
+            <div>
+            Login/Register
+            </div>
+        </div>
+
+    </div>
+    </div>
+    
+</body>
+</html>
