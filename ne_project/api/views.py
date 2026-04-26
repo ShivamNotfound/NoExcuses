@@ -16,6 +16,10 @@ class Home(generic.ListView):
     def get_context_object_name(self, object_list):
         self.request.session = list(Workout.objects.all().values_list("id", flat=True))
         return "muscles"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["workouts"] = Workout.objects.all()
+        return context
     
 @csrf_protect
 def equipment_selection(request):
@@ -49,5 +53,3 @@ def workout_page(request, workout_id):
 
     context = {"workout":workout}
     return render(request, "api/workout.html", context)
-
-
