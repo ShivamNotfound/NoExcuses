@@ -9,12 +9,14 @@
     <div id="container">
         {% for muscle in muscles %}
         <div class="muscles" onclick = "window.location.href=`{% url 'available_workouts_submuscle' muscle.id %}`">
+        <center>
         <div class="muscle_count">
             {{muscle.workouts.count}}
         </div>
         <div class="muscle_name">
             {{muscle.name}}
         </div>
+        </center>
         </div>
         {% empty %}
         <div>
