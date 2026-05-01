@@ -28,7 +28,7 @@ body::before {
     justify-content: space-between;
     flex-wrap:wrap;
     z-index: 10;
-    margin-bottom:60px;
+    margin-bottom:40px;
 }
 
 #nav_items{

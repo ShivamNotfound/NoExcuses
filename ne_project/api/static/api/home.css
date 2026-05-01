@@ -4,7 +4,7 @@ body{
 #select_equipment_btn{
     width:25%;
     padding:8px;
-    border-radius:30px;
+    border-radius:30px; 
     transition: 0.3s;
     font-family:Arial, Helvetica, sans-serif;
     font-size:25px;

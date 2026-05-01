@@ -1,0 +1,73 @@
+
+#search_bar{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(222, 219, 219);
+    font-size: 20px;
+    border:1px solid black;
+    width:40%;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:30px;
+    background-color:black;
+}
+
+.equipment_cards{
+    border:1px solid white;
+    padding:20px;
+    width:25%;
+    margin-bottom:30px;
+    margin-left:30px;
+    height:180px;
+    border-radius:20px;
+}
+
+.equipment_card_box{
+    display:none;
+}
+
+#equipement_container
+{
+    margin:30px;
+    display:flex;
+    flex-direction: row;
+    margin-left:40px;
+    margin-right:40px;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+
+.equipment_name{
+    margin-top:30px;
+    font-family: sans-serif;
+    font-size:25px;
+    color:white;
+    transition: 0.3s;
+}
+
+.equipment_count{
+    color:white;
+    font-size:50px;
+    margin-top:25px;
+    transition: 0.3s;
+}
+
+.equipment_cards:hover{
+    cursor:pointer;
+}
+
+.equipment_cards:hover .equipment_name{
+    transform: scale(1.2);
+}
+.equipment_cards:hover .equipment_count{
+    transform: scale(1.2);
+}
+
+.equipment_card_box:checked + label{
+    box-shadow: green 0 0 10px;
+    border: 2px green solid;
+}
+
+#donebtn{
+    position:absolute;
+
+}

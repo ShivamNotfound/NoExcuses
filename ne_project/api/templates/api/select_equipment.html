@@ -1,28 +1,31 @@
 {% extends "main.html" %}
 {% block content %}
 {% load static %}
-
-    <div id="search_bar">Search bar</div>
+    <link rel="stylesheet" href="{% static 'api/select_equipment.css' %}">
+    <center><div id="search_bar">Search bar</div></center>
 
     <form method="post" action="/select_equipment/">
         {% csrf_token %}
-    <div>
+    <div id="equipement_container">
         {% for equipment in equipments %}
-        <label >
-        <div>
+        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id}}" class="equipment_card_box">
+        <label for="{{equipment.id}}" class="equipment_cards">
+        <center>
+        <div class="equipment_count">
             {{equipment.workouts.count}}
         </div>
-        <div>
+        <div class="equipment_count">
             {{equipment}}
         </div>
+        </center>
         </label>
-        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}">
+        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id}}" class="equipment_card_box">
         {% empty %}
         <div>
             No records exists
         </div>
         {% endfor %}
     </div>
-    <button type = "submit">Done</button>
+    <button type = "submit" id="donebtn">Done</button>
     </form>
 {% endblock %}
