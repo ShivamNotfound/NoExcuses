@@ -27,7 +27,6 @@ def equipment_selection(request):
         ids = list(request.POST.keys())[1:]
         selected_equipments = Equipment.objects.filter(id__in = ids)
         workouts = Workout.objects.filter(equipment__in = selected_equipments)
-        print(workouts)
         request.session['workout_ids'] = list(workouts.values_list("id", flat=True))
         return redirect("available_workouts")
     equipments = Equipment.objects.prefetch_related()
@@ -37,15 +36,18 @@ def equipment_selection(request):
 def available_workouts(request):
     ids = request.session.get("workout_ids")
     muscles = MuscleGroup.objects.prefetch_related()
-    context = {"muscles":muscles,"ids":ids}
+    count = len(ids)
+    context = {"muscles":muscles,"ids":ids, "count":count}
     return render(request,"api/available_workouts.html", context)
 
 def available_workouts_for_submuscle(request, muscle_id, current = -1):
     
     ids = request.session.get("workout_ids")
     submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
-    workouts = submuscles[0].workouts.all() if current == -1 else SubMuscle.objects.get(id = current).workouts.all()
-    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts}
+    if current!=-1:
+        submuscle = SubMuscle.objects.get(id = current)
+    workouts, active = (submuscles[0].workouts.all(),submuscles[0].id) if current == -1 else ((submuscle).workouts.all(), submuscle.id)
+    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts, "active":active}
     return render(request, "api/available_workouts_submuscle.html", context)
 
 def workout_page(request, workout_id):

@@ -19,7 +19,7 @@ body::before {
     transparent 90%
   );
   filter: blur(160px);
-  z-index: 1;
+  z-index: -1;
   
 }
 
