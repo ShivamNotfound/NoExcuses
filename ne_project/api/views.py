@@ -8,7 +8,7 @@ from django.db.models import Count
 
 
 
-class Home(generic.ListView):
+class Home(generic.ListView): 
     model = MuscleGroup
     queryset = MuscleGroup.objects.prefetch_related()
     def get_template_names(self):
@@ -24,7 +24,7 @@ class Home(generic.ListView):
 @csrf_protect
 def equipment_selection(request):
     if request.method == 'POST':
-        ids = list(request.POST.keys())[1:]
+        ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
         selected_equipments = Equipment.objects.filter(id__in = ids)
         workouts = Workout.objects.filter(equipment__in = selected_equipments)
         request.session['workout_ids'] = list(workouts.values_list("id", flat=True))
@@ -46,7 +46,11 @@ def available_workouts_for_submuscle(request, muscle_id, current = -1):
     submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
     if current!=-1:
         submuscle = SubMuscle.objects.get(id = current)
-    workouts, active = (submuscles[0].workouts.all(),submuscles[0].id) if current == -1 else ((submuscle).workouts.all(), submuscle.id)
+        active = submuscle.id
+        workouts = Workout.objects.filter(id__in = ids, sub_muscle = submuscle)
+    else:
+        workouts = Workout.objects.filter(id__in = ids, sub_muscle = submuscles[0])
+        active = submuscles[0].id
     context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts, "active":active}
     return render(request, "api/available_workouts_submuscle.html", context)
 

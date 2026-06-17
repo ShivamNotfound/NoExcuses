@@ -4,7 +4,6 @@ register = template.Library()
 
 @register.simple_tag
 def get_workout_counts(muscle, ids):
-
     return len(muscle.workouts.filter(id__in = ids))
 
 @register.simple_tag

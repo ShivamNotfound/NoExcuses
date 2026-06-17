@@ -1,8 +1,9 @@
 {% extends "main.html" %}
 {% block content %}
 {% load static %}
+        <link rel="stylesheet" href="{% static 'api/workout.css' %}">
         <div>
             <div id="workout_heading">{{workout.name}}</div>
-            <div>{{workout.description}}</div>
+            <div>{{workout.description|linebreaks}}</div>
         </div>
 {% endblock %}

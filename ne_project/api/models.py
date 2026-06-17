@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 class Equipment(models.Model):
@@ -19,12 +19,30 @@ class SubMuscle(models.Model):
         return self.name
 
 class Workout(models.Model):
+    class DifficultyChoices(models.TextChoices):
+        EASY = 'easy', 'easy'
+        MEDIUM = 'medium', 'medium'
+        HARD = 'hard', 'hard'
+    class TypeChoices(models.TextChoices):
+        ISOLATED = 'isolated','isolated'
+        COMPOUND = 'compound', 'compound'
     name = models.CharField(max_length = 50)
-    difficulty = models.PositiveSmallIntegerField()
-    description = models.CharField(max_length = 500)
+    difficulty = models.CharField(choices=DifficultyChoices)
+    description = models.TextField(max_length = 500)
     equipment = models.ManyToManyField(Equipment, related_name = "workouts")
     muscle = models.ManyToManyField(MuscleGroup, related_name = "workouts")
     sub_muscle = models.ManyToManyField(SubMuscle, related_name = 'workouts')
+    type = models.CharField(choices = TypeChoices)
+    strength_score = models.PositiveSmallIntegerField(
+        validators = [MinValueValidator(0), MaxValueValidator(10)]
+    )
+    hypertrophy_score = models.PositiveSmallIntegerField(
+        validators = [MinValueValidator(0), MaxValueValidator(10)]
+    )
+    endurance_score = models.PositiveSmallIntegerField(
+        validators = [MinValueValidator(0), MaxValueValidator(10)]
+    )
+
     def __str__(self):
         return self.name
 
