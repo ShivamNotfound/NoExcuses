@@ -13,13 +13,15 @@
             </div>
             <div class="submuscle_name">{{submuscle}}</div>
             </div>
-            {% endfor %}
+            {% endfor %} 
         </div>
         <div id="workout_container">
             {% for workout in workouts_selected %}
             <div onclick="window.location.href=`{% url 'workout_page' workout.id %}`" class="workout_cards">
                 <center>
                 <div class="workout_name">{{workout.name}}</div>
+                <div class = "{{workout.difficulty}}">
+                </div>
                 </center>
             </div>
             {% endfor %}

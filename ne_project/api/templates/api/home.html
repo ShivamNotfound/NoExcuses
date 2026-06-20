@@ -3,15 +3,16 @@
 {% extends "main.html" %}
 {% block content %}
 {% load static %}
+{% load custom_tags %}
     <link rel="stylesheet" href="{% static 'api/home.css' %}">
-   <center> <div id="select_equipment_btn" onclick="window.location.href = `{% url 'select_equipment' %}`"> Add Equipment</div> </center>
+   <center> <div id="select_equipment_btn" onclick="window.location.href = `{% url 'select_equipment' %}`">{{text}}</div> </center>
    <div id="workouts_count">You have {{workouts.count}} workouts to do</div>
     <div id="container">
         {% for muscle in muscles %}
         <div class="muscles" onclick = "window.location.href=`{% url 'available_workouts_submuscle' muscle.id %}`">
         <center>
         <div class="muscle_count">
-            {{muscle.workouts.count}}
+            {% get_workout_counts muscle ids %}
         </div>
         <div class="muscle_name">
             {{muscle.name}}

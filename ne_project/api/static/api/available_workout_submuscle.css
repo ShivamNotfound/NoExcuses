@@ -80,3 +80,28 @@
 .workout_cards:hover .workout_name{
     transform: scale(1.1);
 }
+
+.medium{
+    background-color: rgb(255, 183, 0);
+    width:14px;
+    height:14px;
+    border-radius:2px;
+    margin-top:20px;
+    margin-left:90%;
+}
+.easy{
+    background-color:#1CBABA;
+    width:14px;
+    height:14px;
+    border-radius:2px;
+    margin-top:20px;
+    margin-left:90%;
+}
+.hard{
+    background-color:#F63737;
+    width:14px;
+    height:14px;
+    border-radius:2px;
+    margin-top:20px;
+    margin-left:90%;
+}

@@ -14,11 +14,20 @@ class Home(generic.ListView):
     def get_template_names(self):
         return "api/home.html"
     def get_context_object_name(self, object_list):
-        self.request.session = list(Workout.objects.all().values_list("id", flat=True))
+        #.request.session = list(Workout.objects.all().values_list("id", flat=True))
         return "muscles"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["workouts"] = Workout.objects.all()
+        ids = self.request.session.get("workout_ids", -1)
+        print(ids)
+        if ids==-1:
+            workouts = Workout.objects.all()
+            context["text"] = "Add equipments"
+        else:
+            workouts = Workout.objects.filter(id__in = ids)
+            context["text"] = "Change equipments"
+        context["workouts"] = workouts
+        context["ids"] = workouts.values_list("id", flat=True)
         return context
     
 @csrf_protect
@@ -28,7 +37,7 @@ def equipment_selection(request):
         selected_equipments = Equipment.objects.filter(id__in = ids)
         workouts = Workout.objects.filter(equipment__in = selected_equipments)
         request.session['workout_ids'] = list(workouts.values_list("id", flat=True))
-        return redirect("available_workouts")
+        return redirect("home")
     equipments = Equipment.objects.prefetch_related()
     context = {"equipments": equipments}
     return render(request, 'api/select_equipment.html', context)
