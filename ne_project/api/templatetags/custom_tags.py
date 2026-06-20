@@ -7,5 +7,5 @@ def get_workout_counts(muscle, ids):
     return len(muscle.workouts.filter(id__in = ids))
 
 @register.simple_tag
-def get_workout_counts_submuscle(muscle_id, ids, submuscle):
-    return len(submuscle.workouts.filter(id__in = ids, muscle__id=muscle_id))
+def get_workout_counts_submuscle(ids, submuscle):
+    return len(submuscle.workouts.filter(id__in = ids))

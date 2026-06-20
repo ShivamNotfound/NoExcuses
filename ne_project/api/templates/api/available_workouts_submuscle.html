@@ -3,13 +3,12 @@
 {% load static %}
 {% load custom_tags %}
         <link rel="stylesheet" href="{% static 'api/available_workout_submuscle.css' %}">
-        <div id="title">Pick one from each</div>
 
         <div id="muscle_container">
             {% for submuscle in submuscles %}
             <div id ="{% if submuscle.id == active %}active{% else %} {% endif %}" onclick="window.location.href=`{% url 'available_workouts_submuscle' muscle_id submuscle.id %}`" class="submuscle_card">
             <div class="submuscle_count">
-                {% get_workout_counts_submuscle muscle_id ids submuscle %}
+                {% get_workout_counts_submuscle ids submuscle %}
             </div>
             <div class="submuscle_name">{{submuscle}}</div>
             </div>

@@ -14,17 +14,15 @@ class Home(generic.ListView):
     def get_template_names(self):
         return "api/home.html"
     def get_context_object_name(self, object_list):
-        #.request.session = list(Workout.objects.all().values_list("id", flat=True))
         return "muscles"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        ids = self.request.session.get("workout_ids", -1)
-        print(ids)
+        ids = self.request.session.get("equipment_ids", -1)
         if ids==-1:
             workouts = Workout.objects.all()
             context["text"] = "Add equipments"
         else:
-            workouts = Workout.objects.filter(id__in = ids)
+            workouts = Workout.objects.filter(equipment__id__in = ids)
             context["text"] = "Change equipments"
         context["workouts"] = workouts
         context["ids"] = workouts.values_list("id", flat=True)
@@ -34,37 +32,31 @@ class Home(generic.ListView):
 def equipment_selection(request):
     if request.method == 'POST':
         ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
+        request.session['equipment_ids'] = ids
         selected_equipments = Equipment.objects.filter(id__in = ids)
         workouts = Workout.objects.filter(equipment__in = selected_equipments)
-        request.session['workout_ids'] = list(workouts.values_list("id", flat=True))
         return redirect("home")
     equipments = Equipment.objects.prefetch_related()
     context = {"equipments": equipments}
     return render(request, 'api/select_equipment.html', context)
 
-def available_workouts(request):
-    ids = request.session.get("workout_ids")
-    muscles = MuscleGroup.objects.prefetch_related()
-    count = len(ids)
-    context = {"muscles":muscles,"ids":ids, "count":count}
-    return render(request,"api/available_workouts.html", context)
-
 def available_workouts_for_submuscle(request, muscle_id, current = -1):
-    
-    ids = request.session.get("workout_ids")
+    ids = request.session.get("equipment_ids", -1)
+    if(ids == -1):
+        ids = Workout.objects.all().values_list("id", flat = True)
     submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
     if current!=-1:
         submuscle = SubMuscle.objects.get(id = current)
         active = submuscle.id
-        workouts = Workout.objects.filter(id__in = ids, sub_muscle = submuscle)
+        workouts = Workout.objects.filter(equipment__id__in = ids, sub_muscle = submuscle).distinct()
     else:
-        workouts = Workout.objects.filter(id__in = ids, sub_muscle = submuscles[0])
+        workouts = Workout.objects.filter(equipment__id__in = ids, sub_muscle = submuscles[0]).distinct()
         active = submuscles[0].id
+    ids = Workout.objects.filter(equipment__id__in = ids).values_list("id", flat = True)
     context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts, "active":active}
     return render(request, "api/available_workouts_submuscle.html", context)
 
 def workout_page(request, workout_id):
     workout = Workout.objects.get(id = workout_id)
-
     context = {"workout":workout}
     return render(request, "api/workout.html", context)
