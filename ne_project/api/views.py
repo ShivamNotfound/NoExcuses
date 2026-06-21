@@ -40,12 +40,13 @@ def equipment_selection(request):
     context = {"equipments": equipments}
     return render(request, 'api/select_equipment.html', context)
 
-def available_workouts_for_submuscle(request, muscle_id, current = -1):
+@csrf_protect
+def available_workouts_for_submuscle(request, muscle_id, current = 0):
     ids = request.session.get("equipment_ids", -1)
     if(ids == -1):
         ids = Workout.objects.all().values_list("id", flat = True)
     submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
-    if current!=-1:
+    if current!=0:
         submuscle = SubMuscle.objects.get(id = current)
         active = submuscle.id
         workouts = Workout.objects.filter(equipment__id__in = ids, sub_muscle = submuscle).distinct()
@@ -53,7 +54,9 @@ def available_workouts_for_submuscle(request, muscle_id, current = -1):
         workouts = Workout.objects.filter(equipment__id__in = ids, sub_muscle = submuscles[0]).distinct()
         active = submuscles[0].id
     ids = Workout.objects.filter(equipment__id__in = ids).values_list("id", flat = True)
-    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts, "active":active}
+    if request.method == 'POST':
+        print(request.POST.get("option"))
+    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts, "active":active, "current":current}
     return render(request, "api/available_workouts_submuscle.html", context)
 
 def workout_page(request, workout_id):
