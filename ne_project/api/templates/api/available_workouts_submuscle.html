@@ -25,10 +25,21 @@
     </a> -->
     <form method="post" action="/submuscles/{{muscle_id}}/{{current}}/" id="sort_form">
         {% csrf_token %}
-        <select type="submit" id="goal" name="option">
-            <option value="1" class="goal_item">Hypertrophy</option>
-            <option value="2" class="goal_item">Stength</option>
-            <option value="3" class="goal_item">Endurance</option>
+        <select id="goal" name="option">
+            <option value="0" class="goal_item" {% if select == '0' %}selected{% endif %}>Hypertrophy</option>
+            <option value="1" class="goal_item" {% if select == '1' %}selected{% endif %}>Stength</option>
+            <option value="2" class="goal_item" {% if select == '2' %}selected{% endif %}>Endurance</option>
+        </select>
+        <select id="difficulty" name="difficulty">
+            <option value="none" class="diff" {% if diff == 0 %}selected{% endif %}>
+                None
+            </option>
+            <option value="eth" class="diff" {% if diff == 1 %}selected{% endif %}>
+                Easy to Hard
+            </option>
+            <option value="hte" class="diff" {% if diff == 2 %}selected{% endif %}>
+                Hard to Easy
+            </option>
         </select>
     </form>
         <div id="workout_container">
@@ -36,7 +47,7 @@
             <div onclick="window.location.href=`{% url 'workout_page' workout.id %}`" class="workout_cards">
                 <center>
                 <div class="workout_name">{{workout.name}}</div>
-                <div class = "{{workout.difficulty}}">
+                <div class = "diff{{workout.difficulty}}">
                 </div>
                 </center>
             </div>

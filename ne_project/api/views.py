@@ -54,9 +54,25 @@ def available_workouts_for_submuscle(request, muscle_id, current = 0):
         workouts = Workout.objects.filter(equipment__id__in = ids, sub_muscle = submuscles[0]).distinct()
         active = submuscles[0].id
     ids = Workout.objects.filter(equipment__id__in = ids).values_list("id", flat = True)
+    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts.order_by("-hypertrophy_score"), "active":active, "current":current}
+    context["select"] = 0
+    context["diff"] = 0
     if request.method == 'POST':
-        print(request.POST.get("option"))
-    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts, "active":active, "current":current}
+        options = ["-hypertrophy_score", "-strength_score", "-endurance_score"]
+        option = request.POST.get("option")
+        difficulty = request.POST.get("difficulty")
+        diff = 0
+        workouts = workouts.order_by(options[int(option)])
+        if difficulty == "eth":
+            workouts = workouts.order_by("difficulty",options[int(option)])
+            diff = 1
+        elif difficulty == "hte":
+            workouts = workouts.order_by("-difficulty", options[int(option)])
+            diff = 2
+        context["workouts_selected"] = workouts
+        context["select"] = option
+        context["diff"] = diff
+    
     return render(request, "api/available_workouts_submuscle.html", context)
 
 def workout_page(request, workout_id):

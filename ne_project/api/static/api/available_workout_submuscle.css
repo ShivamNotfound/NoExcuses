@@ -80,7 +80,7 @@
     transform: scale(1.1);
 }
 
-.medium{
+.diff1{
     background-color: rgb(255, 183, 0);
     width:14px;
     height:14px;
@@ -88,7 +88,7 @@
     margin-top:20px;
     margin-left:90%;
 }
-.easy{
+.diff0{
     background-color:#1CBABA;
     width:14px;
     height:14px;
@@ -96,7 +96,7 @@
     margin-top:20px;
     margin-left:90%;
 }
-.hard{
+.diff2{
     background-color:#F63737;
     width:14px;
     height:14px;

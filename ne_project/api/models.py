@@ -27,7 +27,9 @@ class Workout(models.Model):
         ISOLATED = 'isolated','isolated'
         COMPOUND = 'compound', 'compound'
     name = models.CharField(max_length = 50)
-    difficulty = models.CharField(choices=DifficultyChoices)
+    difficulty = models.PositiveSmallIntegerField(
+        validators = [MinValueValidator(0), MaxValueValidator(2)]
+    )
     description = models.TextField(max_length = 500)
     equipment = models.ManyToManyField(Equipment, related_name = "workouts")
     muscle = models.ManyToManyField(MuscleGroup, related_name = "workouts")
