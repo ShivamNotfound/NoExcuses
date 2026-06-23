@@ -6,8 +6,6 @@ from django.views import generic
 from .models import Equipment, MuscleGroup, Workout, SubMuscle
 from django.db.models import Count
 
-
-
 class Home(generic.ListView): 
     model = MuscleGroup
     queryset = MuscleGroup.objects.prefetch_related()
@@ -72,7 +70,6 @@ def available_workouts_for_submuscle(request, muscle_id, current = 0):
         context["workouts_selected"] = workouts
         context["select"] = option
         context["diff"] = diff
-    
     return render(request, "api/available_workouts_submuscle.html", context)
 
 def workout_page(request, workout_id):
