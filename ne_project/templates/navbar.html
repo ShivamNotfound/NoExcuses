@@ -18,7 +18,7 @@
             <div class="{% if request.resolver_match.url_name == 'about' %}active{% else %}nav_item{% endif %}" id="about">About</div>
             <div class="{% if request.resolver_match.url_name == 'contacts' %}active{% else %}nav_item{% endif %}">Contacts</div>
         </div>
-        <div id="login_logout" class="nav_part">
+        <div id="login_logout" class="nav_part" onclick = "window.location.href = '{% url 'login' %}'">
             <div>
             Login/Register
             </div>

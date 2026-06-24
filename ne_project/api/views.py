@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 from django.views import generic
 from .models import Equipment, MuscleGroup, Workout, SubMuscle
-from django.db.models import Count
+from django.contrib.auth.models import User
 
 class Home(generic.ListView): 
     model = MuscleGroup
@@ -20,7 +20,7 @@ class Home(generic.ListView):
             workouts = Workout.objects.all()
             context["text"] = "Add equipments"
         else:
-            workouts = Workout.objects.filter(equipment__id__in = ids)
+            workouts = Workout.objects.filter(equipment__id__in = ids).distinct()
             context["text"] = "Change equipments"
         context["workouts"] = workouts
         context["ids"] = workouts.values_list("id", flat=True)
@@ -76,3 +76,19 @@ def workout_page(request, workout_id):
     workout = Workout.objects.get(id = workout_id)
     context = {"workout":workout}
     return render(request, "api/workout.html", context)
+
+@csrf_protect
+def login(request):
+    if request.method == 'POST':
+        mail = request.POST.get('email')
+        password = request.POST.get('password')
+
+    return render(request, "api/login.html")
+
+@csrf_protect
+def register(request):
+    if request.method == 'POST':
+        mail = request.POST.get('email')
+        password = request.POST.get('password')
+        
+    return render(request, "api/register.html")
