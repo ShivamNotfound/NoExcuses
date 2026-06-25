@@ -3,8 +3,9 @@ from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
 # Create your views here.
 from django.views import generic
-from .models import Equipment, MuscleGroup, Workout, SubMuscle
+from .models import Equipment, MuscleGroup, Workout, SubMuscle, Profile
 from django.contrib.auth.models import User
+from django.contrib.auth import login, logout, authenticate
 
 class Home(generic.ListView): 
     model = MuscleGroup
@@ -82,7 +83,11 @@ def login(request):
     if request.method == 'POST':
         mail = request.POST.get('email')
         password = request.POST.get('password')
-
+        user = authenticate(username = mail, password = password)
+        if user is not None:
+            login(request, user)
+            redirect("home/")
+        redirect("login/")
     return render(request, "api/login.html")
 
 @csrf_protect
@@ -90,5 +95,16 @@ def register(request):
     if request.method == 'POST':
         mail = request.POST.get('email')
         password = request.POST.get('password')
+        if len(User.objects.filter(username = mail, password = password)) == 0:
+            user = User.objects.create(username = mail, password = password)
+            ids = request.session.get("equipement_ids", -1)
+            if ids == -1:
+                profile = Profile.objects.create(user = user, equipment_ids = [])
+            else:
+                profile = Profile.objects.create(user = user, equipement_ids = ids)
+            user.save()
+            profile.save()
+            redirect("login/")
+        redirect("register/")
         
     return render(request, "api/register.html")

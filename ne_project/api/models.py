@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.contrib.auth.models import User
 # Create your models here.
 
 class Equipment(models.Model):
@@ -49,3 +50,6 @@ class Workout(models.Model):
         return self.name
 
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    equipment_ids = models.JSONField(default=list)
