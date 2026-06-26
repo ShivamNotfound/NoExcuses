@@ -16,8 +16,10 @@ class Home(generic.ListView):
         return "muscles"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        ids = self.request.session.get("equipment_ids", -1)
-        if ids==-1:
+        ids = self.request.session.get("equipment_ids", [])
+        if self.request.user.is_authenticated:
+            ids = Profile.objects.get(user = self.request.user).equipment_ids
+        if ids == []:
             workouts = Workout.objects.all()
             context["text"] = "Add equipments"
         else:
@@ -32,6 +34,10 @@ def equipment_selection(request):
     if request.method == 'POST':
         ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
         request.session['equipment_ids'] = ids
+        if request.user.is_authenticated:
+            pf = Profile.objects.get(user = request.user)
+            pf.equipment_ids = ids
+            pf.save()
         selected_equipments = Equipment.objects.filter(id__in = ids)
         workouts = Workout.objects.filter(equipment__in = selected_equipments)
         return redirect("home")
@@ -41,8 +47,10 @@ def equipment_selection(request):
 
 @csrf_protect
 def available_workouts_for_submuscle(request, muscle_id, current = 0):
-    ids = request.session.get("equipment_ids", -1)
-    if(ids == -1):
+    ids = request.session.get("equipment_ids", [])
+    if request.user.is_authenticated:
+        ids = Profile.objects.get(user = request.user)
+    if(ids == []):
         ids = Workout.objects.all().values_list("id", flat = True)
     submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
     if current!=0:
@@ -83,11 +91,13 @@ def login(request):
     if request.method == 'POST':
         mail = request.POST.get('email')
         password = request.POST.get('password')
-        user = authenticate(username = mail, password = password)
+        user = authenticate(request, username = mail, password = password)
+        print(user)
         if user is not None:
+            print("It worked!")
             login(request, user)
-            redirect("home/")
-        redirect("login/")
+            return redirect("home")
+        return redirect("login")
     return render(request, "api/login.html")
 
 @csrf_protect
@@ -95,8 +105,10 @@ def register(request):
     if request.method == 'POST':
         mail = request.POST.get('email')
         password = request.POST.get('password')
-        if len(User.objects.filter(username = mail, password = password)) == 0:
-            user = User.objects.create(username = mail, password = password)
+        print(list(User.objects.filter(username = mail, password = password)))
+        print(len(list(User.objects.filter(username = mail, password = password))))
+        if len(list(User.objects.filter(username = mail, password = password))) == 0:
+            user = User.objects.create_user(username = mail, password = password, is_active = True)
             ids = request.session.get("equipement_ids", -1)
             if ids == -1:
                 profile = Profile.objects.create(user = user, equipment_ids = [])
@@ -104,7 +116,9 @@ def register(request):
                 profile = Profile.objects.create(user = user, equipement_ids = ids)
             user.save()
             profile.save()
-            redirect("login/")
-        redirect("register/")
+            return redirect("login")
+        else:
+            print('nope')
+            return redirect("register")
         
     return render(request, "api/register.html")
