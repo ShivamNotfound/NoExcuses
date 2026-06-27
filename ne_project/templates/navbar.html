@@ -18,12 +18,20 @@
             <div class="{% if request.resolver_match.url_name == 'about' %}active{% else %}nav_item{% endif %}" id="about">About</div>
             <div class="{% if request.resolver_match.url_name == 'contacts' %}active{% else %}nav_item{% endif %}">Contacts</div>
         </div>
+        {% if user.is_authenticated %}
+        <div id="login_logout" class="nav_part" onclick = "window.location.href = '{% url 'logout' %}'">
+            <div>
+            Logout
+            </div>
+        </div>
+        {% else %}
         <div id="login_logout" class="nav_part" onclick = "window.location.href = '{% url 'login' %}'">
             <div>
             Login/Register
             </div>
         </div>
-
+        {% endif %}
+ 
     </div>
     
 </body>

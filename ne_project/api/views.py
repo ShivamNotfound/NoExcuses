@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.views import generic
 from .models import Equipment, MuscleGroup, Workout, SubMuscle, Profile
 from django.contrib.auth.models import User
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login as auth_login, logout as auth_logout, authenticate
 
 class Home(generic.ListView): 
     model = MuscleGroup
@@ -33,11 +33,12 @@ class Home(generic.ListView):
 def equipment_selection(request):
     if request.method == 'POST':
         ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
-        request.session['equipment_ids'] = ids
         if request.user.is_authenticated:
             pf = Profile.objects.get(user = request.user)
             pf.equipment_ids = ids
             pf.save()
+        else:
+            request.session['equipment_ids'] = ids
         selected_equipments = Equipment.objects.filter(id__in = ids)
         workouts = Workout.objects.filter(equipment__in = selected_equipments)
         return redirect("home")
@@ -49,7 +50,7 @@ def equipment_selection(request):
 def available_workouts_for_submuscle(request, muscle_id, current = 0):
     ids = request.session.get("equipment_ids", [])
     if request.user.is_authenticated:
-        ids = Profile.objects.get(user = request.user)
+        ids = Profile.objects.get(user = request.user).equipment_ids
     if(ids == []):
         ids = Workout.objects.all().values_list("id", flat = True)
     submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
@@ -92,10 +93,8 @@ def login(request):
         mail = request.POST.get('email')
         password = request.POST.get('password')
         user = authenticate(request, username = mail, password = password)
-        print(user)
         if user is not None:
-            print("It worked!")
-            login(request, user)
+            auth_login(request, user)
             return redirect("home")
         return redirect("login")
     return render(request, "api/login.html")
@@ -105,10 +104,8 @@ def register(request):
     if request.method == 'POST':
         mail = request.POST.get('email')
         password = request.POST.get('password')
-        print(list(User.objects.filter(username = mail, password = password)))
-        print(len(list(User.objects.filter(username = mail, password = password))))
         if len(list(User.objects.filter(username = mail, password = password))) == 0:
-            user = User.objects.create_user(username = mail, password = password, is_active = True)
+            user = User.objects.create_user(username = mail, password = password)
             ids = request.session.get("equipement_ids", -1)
             if ids == -1:
                 profile = Profile.objects.create(user = user, equipment_ids = [])
@@ -122,3 +119,7 @@ def register(request):
             return redirect("register")
         
     return render(request, "api/register.html")
+
+def logout(request):
+    auth_logout(request)
+    return redirect("home")

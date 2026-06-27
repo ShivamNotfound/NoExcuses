@@ -1,17 +1,25 @@
-<!DOCTYPE html>
 
-<html>
-    <head></head>
-    <body>
+{% extends "main.html" %}
+
+{% block content %}
+{% load static %}
+        <link rel="stylesheet" href="{% static 'api/login.css' %}">
         
         <form method="POST" action="/login/">
             {% csrf_token %}
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <div onclick = "window.location.href = '{% url 'register' %}'">Create account</div>
-            <button type="submit">Done</button>
+            <div id="form_container">
+            <div id="form_title">Login</div>
+            <label for="email" id="email_label" class=>Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            <label for="password" id="password_label" >Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <div onclick = "window.location.href = '{% url 'register' %}'" id="switch_auth">Create account</div>
+            <button type="submit" id="done_btn">
+                <div>
+                    Done
+                </div>
+                </button>
+            </div>
         </form>
-    </body>
-</html>
+
+{% endblock %}
