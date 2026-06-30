@@ -2,7 +2,14 @@
 {% block content %}
 {% load static %}
     <link rel="stylesheet" href="{% static 'api/select_equipment.css' %}">
-    <center><div id="search_bar">Search bar</div></center>
+    <form method="POST" action="/select_equipment/" id="search_form">
+        {% csrf_token %}
+        <center>
+            <label for="search_bar" name="search_value" id="search_label"></label>
+            <input id="search_bar" placeholder="Search" name="search_value">
+            <button id="search_btn" type="submit" name="search_bar">D</button>
+        </center>
+    </form>
 
     <form method="post" action="/select_equipment/">
         {% csrf_token %}
@@ -29,4 +36,6 @@
     <button type = "submit" id="donebtn">Done</button>
     <div id="blurbar"></div>
     </form>
+
+<script src="{% static 'api/select_equipment.js' %}"></script>
 {% endblock %}

@@ -31,19 +31,25 @@ class Home(generic.ListView):
     
 @csrf_protect
 def equipment_selection(request):
-    if request.method == 'POST':
-        ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
-        if request.user.is_authenticated:
-            pf = Profile.objects.get(user = request.user)
-            pf.equipment_ids = ids
-            pf.save()
-        else:
-            request.session['equipment_ids'] = ids
-        selected_equipments = Equipment.objects.filter(id__in = ids)
-        workouts = Workout.objects.filter(equipment__in = selected_equipments)
-        return redirect("home")
     equipments = Equipment.objects.prefetch_related()
-    context = {"equipments": equipments}
+
+    if request.method == 'POST':
+        print(request.POST)
+        if "search_bar" not in request.POST:
+            ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
+            if request.user.is_authenticated:
+                pf = Profile.objects.get(user = request.user)
+                pf.equipment_ids = ids
+                pf.save()
+            else:
+                request.session['equipment_ids'] = ids
+            selected_equipments = Equipment.objects.filter(id__in = ids)
+            workouts = Workout.objects.filter(equipment__in = selected_equipments)
+            return redirect("home")
+        else:
+            if request.POST.get('search_value') != "":
+                equipments = Equipment.objects.filter(name__icontains = request.POST.get("search_value"))
+    context = {"equipments": equipments}        
     return render(request, 'api/select_equipment.html', context)
 
 @csrf_protect
