@@ -5,8 +5,7 @@
     <form method="POST" action="/select_equipment/" id="search_form">
         {% csrf_token %}
         <center>
-            <label for="search_bar" name="search_value" id="search_label"></label>
-            <input id="search_bar" placeholder="Search" name="search_value">
+            <input id="search_bar" placeholder="Search" name="search_value" value="{{search_value}}">
             <button id="search_btn" type="submit" name="search_bar">D</button>
         </center>
     </form>
