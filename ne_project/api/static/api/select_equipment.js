@@ -1,7 +1,20 @@
 const searchbar = document.getElementById("search_bar");
 const form = document.getElementById("search_form");
+let equipments = document.querySelectorAll(".equipment_cards");
+let name;
+searchbar.addEventListener("input", (e)=>{
+    
+    const value = searchbar.value.toLowerCase();
 
-searchbar.addEventListener("change", (e)=>{
-    console.log("Changing!");
-    form.submit();
+    equipments.forEach(element => {
+        name = element.getAttribute("name").toLowerCase();
+        if(name.includes(value))
+        {
+            element.style.display = "";
+        }
+        else{
+            element.style.display = "none";
+        }
+    });
+
 })

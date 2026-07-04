@@ -2,20 +2,20 @@
 {% block content %}
 {% load static %}
     <link rel="stylesheet" href="{% static 'api/select_equipment.css' %}">
-    <form method="POST" action="/select_equipment/" id="search_form">
-        {% csrf_token %}
+    <!--<form method="POST" action="/select_equipment/" id="search_form">
+        {% csrf_token %} -->
         <center>
-            <input id="search_bar" placeholder="Search" name="search_value" value="{{search_value}}">
+            <input id="search_bar" placeholder="Search" name="search_value" >
             <button id="search_btn" type="submit" name="search_bar">D</button>
         </center>
-    </form>
+    <!-- </form> -->
 
     <form method="post" action="/select_equipment/">
         {% csrf_token %}
     <div id="equipement_container">
         {% for equipment in equipments %}
         <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id}}" class="equipment_card_box">
-        <label for="{{equipment.id}}" class="equipment_cards">
+        <label for="{{equipment.id}}" class="equipment_cards" name="{{equipment}}">
         <center>
         <div class="equipment_count">
             {{equipment.workouts.count}}
