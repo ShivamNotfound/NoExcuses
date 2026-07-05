@@ -22,6 +22,14 @@
     visibility: hidden;
 }
 
+#search_btn{
+    background-color: black;
+    transform: scale(0.7);
+}
+#search_btn svg{
+    margin-top:5px;
+}
+
 .equipment_cards{
     border:1px solid white;
     padding:20px;
