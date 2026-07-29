@@ -1,0 +1,1761 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-04-22T16:29:07.382Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Equipment object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-04-22T16:29:11.668Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Equipment object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-04-22T16:29:19.729Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Equipment object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-04-22T16:30:10.627Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Chest",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-04-22T16:30:19.473Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Biceps",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-04-22T16:30:26.061Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Abs",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-04-22T16:31:04.664Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Lower abs",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-04-22T16:31:10.927Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Upper chest",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-04-22T16:49:31.641Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Inclined pushups",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-04-22T16:50:00.065Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Inclined pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Equipment\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-04-22T16:50:06.725Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Inclined pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Equipment\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-04-22T16:50:25.001Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Inclined pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Equipment\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-04-24T11:37:12.332Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Upper chest",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-04-24T11:37:12.332Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Lower abs",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-04-24T11:37:54.287Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Upper chest",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-04-24T11:38:03.504Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Lower chest",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-04-24T11:38:10.006Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Extension",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-04-24T11:42:03.430Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Inclined pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sub muscle\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-04-26T13:59:34.482Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Triceps",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-04-26T13:59:39.922Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Lat",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-04-26T13:59:54.737Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Forearms",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-04-26T14:00:25.620Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Legs",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-06-17T11:42:08.440Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Inclined pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\", \"Equipment\", \"Type\", \"Strength score\", \"Hypertrophy score\", \"Endurance score\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-06-17T13:13:12.252Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Body weight",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-06-17T13:14:43.166Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Body weight",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-06-17T13:15:40.003Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "No equipments",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-06-17T13:35:05.120Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Middle chest",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-06-17T13:37:09.376Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Pushups",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-06-17T13:40:58.253Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Declined pushups",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-06-17T13:45:08.997Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Dips",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-06-17T13:52:18.808Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Long head",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-06-17T13:52:25.207Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Short head",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-06-17T13:52:53.878Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Brachialis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-06-17T13:53:34.415Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Brachioradialis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-06-17T14:01:49.601Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Brachialis",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-06-17T14:02:07.471Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Short head",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-06-17T14:02:18.289Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Long short",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-06-17T14:06:35.049Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Dumbbells",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-06-17T14:07:34.095Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Bagpack",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-06-17T14:08:23.097Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Backpack",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-06-17T14:09:48.432Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Long head",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-06-17T14:10:42.027Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Curls",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-06-17T14:11:57.102Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Hammer curls",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-06-20T07:28:42.531Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Long head",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-06-20T07:29:02.634Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Lateral head",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-06-20T07:29:12.376Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Medial head",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-06-20T07:29:52.721Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Diamond pushups",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-06-20T10:28:53.951Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Decline dumbbell press",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-06-20T10:31:35.570Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "DB flyes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-06-20T11:41:31.150Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Inclined pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Equipment\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-06-22T14:46:08.478Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "DB flyes",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-06-22T14:46:22.481Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Decline dumbbell press",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-06-22T14:46:27.966Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Diamond pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-06-22T14:46:34.839Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Hammer curls",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-06-22T14:46:44.235Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Diamond pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-06-22T14:47:01.249Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Curls",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-06-22T14:47:12.986Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Dips",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-06-22T14:47:25.007Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Declined pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-06-22T14:47:29.600Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-06-22T14:47:33.923Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Inclined pushups",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Difficulty\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-07-08T16:29:29.302Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Legs",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-07-08T16:29:29.303Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Lat",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-07-08T16:29:29.303Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Abs",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-07-08T16:37:31.180Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Back",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-07-08T16:37:42.267Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Shoulders",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-07-08T16:37:58.158Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Abdominals",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-07-08T16:38:07.035Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Obliques",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-07-08T16:38:11.714Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Hamstrings",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-07-08T16:38:19.191Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Glutes",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-07-08T16:38:25.152Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Calves",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-07-08T16:39:34.915Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Calves",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-07-08T16:39:34.915Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Hamstrings",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-07-08T16:39:44.777Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "Neck",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-07-08T16:39:56.564Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "Traps",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-07-08T16:40:35.383Z",
+    "user": 14,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "Legs",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$RVMWw3R6By0eEOvJY3oPVt$7YX5fz60JJ41MeNr9tkxZ5CsVG1c3qzUG5WEUcyftOw=",
+    "last_login": "2026-04-22T16:25:48.281Z",
+    "is_superuser": true,
+    "username": "shivam",
+    "first_name": "",
+    "last_name": "",
+    "email": "shivam@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-22T16:25:31.107Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$W4wppBipd8xNjeXiJ2T37T$OlqdWjdgkGWSK9u+LwuCeZ6VOsEfETFv9ExqaUjlJ7k=",
+    "last_login": "2026-06-17T11:38:31.350Z",
+    "is_superuser": true,
+    "username": "yash",
+    "first_name": "",
+    "last_name": "",
+    "email": "yash@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-17T11:38:09.639Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "yash@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:27:00.489Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "shivam@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:44:28.944Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "y@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:45:42.108Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "z@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:46:52.246Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "a@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:48:03.091Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "b@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:48:36.918Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "c@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:49:02.188Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "d@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:51:28.686Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "1",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "e@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:52:12.264Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$U7YcTlFqX3hxTDDWwZANKI$Gz+YGE+Nvg0lO5n/klK0xDsdnX9UONkx9Hq2l8jBi3M=",
+    "last_login": "2026-06-27T10:37:05.888Z",
+    "is_superuser": false,
+    "username": "f@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-26T17:59:46.676Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$V2UF9bcKrxGoVhYPFrRSAB$7KxxhXSXrKYTjxcUZ7a2E10XBeZa25PaMu2qp8ODCuM=",
+    "last_login": "2026-07-29T15:03:18.240Z",
+    "is_superuser": false,
+    "username": "g@gmail.com",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-27T10:35:52.399Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$ZHQ7QkFOlUSho06oFoffXe$diyLk3Uv+syGth0GnVYmNIw38qSatPzd8CVXaiys3rg=",
+    "last_login": "2026-07-08T16:28:29.633Z",
+    "is_superuser": true,
+    "username": "yashraj",
+    "first_name": "",
+    "last_name": "",
+    "email": "yashraj@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-07-04T16:53:21.135Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2tvkh1qnxhv0jzs8q12rah9004ii4mvk",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQAP9lz6ahj2UpR-9-A9ntw6KGJhROxn83JBz0OjOZN0y8b2XaW1qnOcII2sLlFwqHZ1oOEx-83KsKddnWWdSRqNM2dasxva5n-zco3AqMQMkHMdoEKymjZur14NnnoevZkQix6QzZKBIcDtxh5uyQsEcxXpDg8wUPjTgG:1wdQQ4:zHjQqS8s84-mchnCM6DxpB2kJ8mOqYJYQSktV41txY4",
+    "expire_date": "2026-07-11T10:37:52.283Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c115kgf8wlca65hs5fnxq8q1ij4rkxkm",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0OAUpb26N03kIXdStXQpLQn499Nkx70OjOZN0TatxL3JmucGUYwDi6_MFF-Sj0MP6jeF5WXuq1zUkeiTtvUbWF5Xc_2b1CoFRihI8NavAuGJhYk9JjFIvpB5xy8y5YNdyyTTUb3ejB9soTJa2LCwA4-XxNCOFc:1whV8P:Ux5wanpV7u1JMBFbIbMgLJPS6qnmOIG4GELHT5nrC40",
+    "expire_date": "2026-07-22T16:28:29.641Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ycirbq2pytmf4ro17u0qacnp9ykv6o4j",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQAP9lz6ahj2UpR-9-A9ntw6KGJhROxn83JBz0OjOZN0y8b2XaW1qnOcII2sLlFwqHZ1oOEx-83KsKddnWWdSRqNM2dasxva5n-zco3AqMQMkHMdoEKymjZur14NnnoevZkQix6QzZKBIcDtxh5uyQsEcxXpDg8wUPjTgG:1wp5oU:2UEcJd6qlFd0mh-JI91tKBsqQ_ue1TOcNM4R9Y0kKow",
+    "expire_date": "2026-08-12T15:03:18.246Z"
+  }
+},
+{
+  "model": "api.equipment",
+  "pk": 1,
+  "fields": {
+    "name": "Chair"
+  }
+},
+{
+  "model": "api.equipment",
+  "pk": 2,
+  "fields": {
+    "name": "Table"
+  }
+},
+{
+  "model": "api.equipment",
+  "pk": 3,
+  "fields": {
+    "name": "Sofa"
+  }
+},
+{
+  "model": "api.equipment",
+  "pk": 5,
+  "fields": {
+    "name": "No equipments"
+  }
+},
+{
+  "model": "api.equipment",
+  "pk": 6,
+  "fields": {
+    "name": "Dumbbells"
+  }
+},
+{
+  "model": "api.equipment",
+  "pk": 7,
+  "fields": {
+    "name": "Backpack"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 1,
+  "fields": {
+    "name": "Chest"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 2,
+  "fields": {
+    "name": "Biceps"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 4,
+  "fields": {
+    "name": "Triceps"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 6,
+  "fields": {
+    "name": "Forearms"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 8,
+  "fields": {
+    "name": "Back"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 9,
+  "fields": {
+    "name": "Shoulders"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 10,
+  "fields": {
+    "name": "Abdominals"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 11,
+  "fields": {
+    "name": "Obliques"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 13,
+  "fields": {
+    "name": "Glutes"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 15,
+  "fields": {
+    "name": "Neck"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 16,
+  "fields": {
+    "name": "Traps"
+  }
+},
+{
+  "model": "api.musclegroup",
+  "pk": 17,
+  "fields": {
+    "name": "Legs"
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 1,
+  "fields": {
+    "name": "Upper chest",
+    "muscle": 1
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 2,
+  "fields": {
+    "name": "Lower chest",
+    "muscle": 1
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 3,
+  "fields": {
+    "name": "Middle chest",
+    "muscle": 1
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 4,
+  "fields": {
+    "name": "Brachioradialis",
+    "muscle": 2
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 5,
+  "fields": {
+    "name": "Brachialis",
+    "muscle": 2
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 6,
+  "fields": {
+    "name": "Short head",
+    "muscle": 2
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 7,
+  "fields": {
+    "name": "Long head",
+    "muscle": 2
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 8,
+  "fields": {
+    "name": "Long head",
+    "muscle": 4
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 9,
+  "fields": {
+    "name": "Lateral head",
+    "muscle": 4
+  }
+},
+{
+  "model": "api.submuscle",
+  "pk": 10,
+  "fields": {
+    "name": "Medial head",
+    "muscle": 4
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 1,
+  "fields": {
+    "name": "Inclined pushups",
+    "difficulty": 0,
+    "description": "Place your hands on the chair, body straight, and do pushups.",
+    "type": "isolated",
+    "strength_score": 8,
+    "hypertrophy_score": 6,
+    "endurance_score": 7,
+    "equipment": [
+      1,
+      3,
+      5
+    ],
+    "muscle": [
+      1
+    ],
+    "sub_muscle": [
+      2
+    ]
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 2,
+  "fields": {
+    "name": "Pushups",
+    "difficulty": 1,
+    "description": "blah blah",
+    "type": "compound",
+    "strength_score": 9,
+    "hypertrophy_score": 7,
+    "endurance_score": 9,
+    "equipment": [
+      5
+    ],
+    "muscle": [
+      1
+    ],
+    "sub_muscle": [
+      3
+    ]
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 3,
+  "fields": {
+    "name": "Declined pushups",
+    "difficulty": 2,
+    "description": "blah blah",
+    "type": "isolated",
+    "strength_score": 9,
+    "hypertrophy_score": 7,
+    "endurance_score": 9,
+    "equipment": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "muscle": [
+      1
+    ],
+    "sub_muscle": [
+      1
+    ]
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 4,
+  "fields": {
+    "name": "Dips",
+    "difficulty": 1,
+    "description": "Blah",
+    "type": "isolated",
+    "strength_score": 8,
+    "hypertrophy_score": 7,
+    "endurance_score": 9,
+    "equipment": [
+      1
+    ],
+    "muscle": [
+      1
+    ],
+    "sub_muscle": [
+      2
+    ]
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 5,
+  "fields": {
+    "name": "Curls",
+    "difficulty": 0,
+    "description": "Blah",
+    "type": "isolated",
+    "strength_score": 6,
+    "hypertrophy_score": 9,
+    "endurance_score": 7,
+    "equipment": [
+      6,
+      7
+    ],
+    "muscle": [
+      2
+    ],
+    "sub_muscle": [
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 6,
+  "fields": {
+    "name": "Hammer curls",
+    "difficulty": 0,
+    "description": "Blah",
+    "type": "isolated",
+    "strength_score": 6,
+    "hypertrophy_score": 8,
+    "endurance_score": 7,
+    "equipment": [
+      6,
+      7
+    ],
+    "muscle": [
+      2
+    ],
+    "sub_muscle": [
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 7,
+  "fields": {
+    "name": "Diamond pushups",
+    "difficulty": 1,
+    "description": "Blah Blah",
+    "type": "isolated",
+    "strength_score": 8,
+    "hypertrophy_score": 7,
+    "endurance_score": 8,
+    "equipment": [
+      5
+    ],
+    "muscle": [
+      4
+    ],
+    "sub_muscle": [
+      8,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 8,
+  "fields": {
+    "name": "Decline dumbbell press",
+    "difficulty": 2,
+    "description": "blah",
+    "type": "isolated",
+    "strength_score": 7,
+    "hypertrophy_score": 9,
+    "endurance_score": 7,
+    "equipment": [
+      6
+    ],
+    "muscle": [
+      1
+    ],
+    "sub_muscle": [
+      2
+    ]
+  }
+},
+{
+  "model": "api.workout",
+  "pk": 9,
+  "fields": {
+    "name": "DB flyes",
+    "difficulty": 1,
+    "description": "blah",
+    "type": "isolated",
+    "strength_score": 7,
+    "hypertrophy_score": 9,
+    "endurance_score": 7,
+    "equipment": [
+      6
+    ],
+    "muscle": [
+      1
+    ],
+    "sub_muscle": [
+      2
+    ]
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 1,
+  "fields": {
+    "user": 3,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 2,
+  "fields": {
+    "user": 4,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 3,
+  "fields": {
+    "user": 5,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 4,
+  "fields": {
+    "user": 6,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 5,
+  "fields": {
+    "user": 7,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 6,
+  "fields": {
+    "user": 8,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 7,
+  "fields": {
+    "user": 9,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 8,
+  "fields": {
+    "user": 10,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 9,
+  "fields": {
+    "user": 11,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 10,
+  "fields": {
+    "user": 12,
+    "equipment_ids": []
+  }
+},
+{
+  "model": "api.profile",
+  "pk": 11,
+  "fields": {
+    "user": 13,
+    "equipment_ids": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ]
+  }
+}
+]

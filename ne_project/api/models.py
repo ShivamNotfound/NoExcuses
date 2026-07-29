@@ -35,7 +35,7 @@ class Workout(models.Model):
     equipment = models.ManyToManyField(Equipment, related_name = "workouts")
     muscle = models.ManyToManyField(MuscleGroup, related_name = "workouts")
     sub_muscle = models.ManyToManyField(SubMuscle, related_name = 'workouts')
-    type = models.CharField(choices = TypeChoices)
+    type = models.CharField(choices = TypeChoices, max_length = 20)
     strength_score = models.PositiveSmallIntegerField(
         validators = [MinValueValidator(0), MaxValueValidator(10)]
     )
@@ -60,7 +60,7 @@ class WorkoutMedia(models.Model):
         VIDEO = 'video', 'video'
     workout = models.ForeignKey(Workout, on_delete= models.CASCADE)
     url = models.CharField(max_length = 30)
-    type = models.CharField(choices = TypeChoices)
+    type = models.CharField(choices = TypeChoices, max_length = 20)
     category = models.CharField(max_length = 30)
     caption = models.CharField(max_length = 50)
 class Profile(models.Model):
