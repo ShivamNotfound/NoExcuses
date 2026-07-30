@@ -33,7 +33,6 @@ class Workout(models.Model):
     )
     description = models.TextField(max_length = 500)
     equipment = models.ManyToManyField(Equipment, related_name = "workouts")
-    muscle = models.ManyToManyField(MuscleGroup, related_name = "workouts")
     sub_muscle = models.ManyToManyField(SubMuscle, related_name = 'workouts')
     type = models.CharField(choices = TypeChoices, max_length = 20)
     strength_score = models.PositiveSmallIntegerField(
