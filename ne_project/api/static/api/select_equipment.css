@@ -3,7 +3,7 @@
     color:rgb(222, 219, 219);
     font-size: 20px;
     border:1px solid black;
-    width:25%;
+    width:40%;
     min-width:200px;
     padding-top:10px;
     padding-bottom:10px;
@@ -19,6 +19,16 @@
 }
 #search_label{
     visibility: hidden;
+}
+#search_bar_container{
+    display:flex;
+    padding-left:36%;
+    justify-content:space-between;
+}
+#muscle_percent
+{
+    margin-right:10%;
+    color:white;
 }
 
 .equipment_cards{
@@ -88,7 +98,7 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border:1px black solid;
-    background-color: black;
+    background-color: black; 
     color:rgb(222, 219, 219);
     transition:0.3s;
 }

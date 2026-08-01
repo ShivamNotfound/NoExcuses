@@ -15,7 +15,7 @@ class MuscleGroup(models.Model):
 
 class SubMuscle(models.Model):
     name = models.CharField(max_length = 30)
-    muscle = models.ForeignKey(MuscleGroup, on_delete=models.CASCADE, null= True)
+    muscle = models.ForeignKey(MuscleGroup, on_delete=models.CASCADE, null= True,related_name="muscles")
     def __str__(self):
         return self.name
 

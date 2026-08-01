@@ -32,6 +32,16 @@ class Home(generic.ListView):
 @csrf_protect
 def equipment_selection(request):
     equipments = Equipment.objects.prefetch_related()
+    submuscles = SubMuscle.objects.all()
+    workouts = Workout.objects.all()
+    equipment_data = {}
+    for e in equipments:
+        works = e.workouts.values_list('id', flat=True)
+        res = []
+        for w in works:
+            res.extend(workouts.get(id = w).sub_muscle.values_list('id', flat=True))
+        equipment_data[e.id] = list(set(res))
+    print(equipment_data)
     if request.method == 'POST':
         ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
         if request.user.is_authenticated:

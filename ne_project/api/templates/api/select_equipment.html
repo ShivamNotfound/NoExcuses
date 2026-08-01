@@ -3,10 +3,11 @@
 {% load static %}
     <link rel="stylesheet" href="{% static 'api/select_equipment.css' %}">
         <div id="search_bar_container">
-        <center>
-            <!-- <button id="search_btn" type="submit" name="search_bar"></button> -->
-            <input id="search_bar" placeholder="Search" name="search_value" >
-        </center>
+
+            <input id="search_bar" placeholder="Search" name="search_value">
+            <div id="muscle_percent">
+                0% of muscles
+            </div>
         </div>
     <form method="post" action="/select_equipment/">
         {% csrf_token %}

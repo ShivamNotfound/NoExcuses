@@ -1,5 +1,4 @@
 const searchbar = document.getElementById("search_bar");
-const form = document.getElementById("search_form");
 let equipments = document.querySelectorAll(".equipment_cards");
 let name;
 searchbar.addEventListener("input", (e)=>{
