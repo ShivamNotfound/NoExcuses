@@ -1,6 +1,7 @@
 {% extends "main.html" %}
 {% block content %}
 {% load static %}
+{% load custom_tags %}
     <link rel="stylesheet" href="{% static 'api/select_equipment.css' %}">
         <div id="search_bar_container">
 
@@ -13,7 +14,7 @@
         {% csrf_token %}
     <div id="equipement_container">
         {% for equipment in equipments %}
-        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id}}" class="equipment_card_box">
+        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id }}" class="equipment_card_box" key="{% get_item sub_data equipment.id %}">
         <label for="{{equipment.id}}" class="equipment_cards" name="{{equipment}}">
         <center>
         <div class="equipment_count">

@@ -32,7 +32,6 @@ class Home(generic.ListView):
 @csrf_protect
 def equipment_selection(request):
     equipments = Equipment.objects.prefetch_related()
-    submuscles = SubMuscle.objects.all()
     workouts = Workout.objects.all()
     equipment_data = {}
     for e in equipments:
@@ -40,8 +39,7 @@ def equipment_selection(request):
         res = []
         for w in works:
             res.extend(workouts.get(id = w).sub_muscle.values_list('id', flat=True))
-        equipment_data[e.id] = list(set(res))
-    print(equipment_data)
+        equipment_data[e.id] = len(set(res))
     if request.method == 'POST':
         ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
         if request.user.is_authenticated:
@@ -51,7 +49,7 @@ def equipment_selection(request):
         else:
             request.session['equipment_ids'] = ids
         return redirect("home")
-    context = {"equipments": equipments}        
+    context = {"equipments": equipments,'sub_data':equipment_data}        
     return render(request, 'api/select_equipment.html', context)
 
 @csrf_protect
