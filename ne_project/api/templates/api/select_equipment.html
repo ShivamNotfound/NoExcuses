@@ -14,8 +14,9 @@
         {% csrf_token %}
     <div id="equipement_container">
         {% for equipment in equipments %}
-        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id }}" class="equipment_card_box" key="{% get_item sub_data equipment.id %}">
+        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id }}" class="equipment_card_box">
         <label for="{{equipment.id}}" class="equipment_cards" name="{{equipment}}">
+        <div style="display:none" id="{{equipment.id}}forPercent" value="{% get_item sub_data equipment.id %}"></div>
         <center>
         <div class="equipment_count">
             {{equipment.workouts.count}}
