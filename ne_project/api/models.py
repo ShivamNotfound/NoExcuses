@@ -49,16 +49,16 @@ class Workout(models.Model):
         return self.name
 
 class Steps(models.Model):
-    workout = models.ForeignKey(Workout, on_delete = models.CASCADE)
+    workout = models.ForeignKey(Workout, on_delete = models.CASCADE, related_name="steps")
     step_number = models.PositiveSmallIntegerField()
     instruction = models.TextField(max_length = 200)
-    image_url = models.CharField(max_length = 30)
+    image_url = models.ImageField(upload_to = "steps")
 class WorkoutMedia(models.Model):
     class TypeChoices(models.TextChoices):
         IMAGE = 'image', 'image'
         VIDEO = 'video', 'video'
-    workout = models.ForeignKey(Workout, on_delete= models.CASCADE)
-    url = models.CharField(max_length = 30)
+    workout = models.ForeignKey(Workout, on_delete= models.CASCADE, related_name = "workout_media")
+    g_url = models.FileField(upload_to="work_media")
     type = models.CharField(choices = TypeChoices, max_length = 20)
     category = models.CharField(max_length = 30)
     caption = models.CharField(max_length = 50)

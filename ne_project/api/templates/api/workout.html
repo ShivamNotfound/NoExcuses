@@ -2,8 +2,28 @@
 {% block content %}
 {% load static %}
         <link rel="stylesheet" href="{% static 'api/workout.css' %}">
-        <div>
-            <div id="workout_heading">{{workout.name}}</div>
-            <div>{{workout.description|linebreaks}}</div>
-        </div>
+        <div id="workout_heading">{{workout.name}}</div>
+        <div id="workout_description">{{workout.description|linebreaks}}</div>
+        
+        <center>
+        {% for med in media %}
+        {% if med.type == 'image' %}
+        <img src="{{med.g_url.url}}" alt="" class="medias">
+        {% else %}
+        <video controls class="medias" width="40%" height="400px">
+            <source src="{{med.g_url.url}}" type="video/mp4">
+            doesn't support
+        </video>
+        {% endif %}
+        {% endfor %}
+        </center>
+
+        <div id="steps_heading">Steps:</div>
+
+        {% for step in steps %}
+        <div class="step">{{step.step_number}}.{{step.instruction}}</div>
+        <center>
+            <img src={{step.image_url.url}} class="step_images">
+        </center>
+        {% endfor %}
 {% endblock %}

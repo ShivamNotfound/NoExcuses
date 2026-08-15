@@ -90,7 +90,10 @@ def available_workouts_for_submuscle(request, muscle_id, current = 0):
 
 def workout_page(request, workout_id):
     workout = Workout.objects.get(id = workout_id)
-    context = {"workout":workout}
+    steps = workout.steps.all()
+    workout_media = workout.workout_media.all()
+    print(steps, workout_media)
+    context = {"workout":workout, 'steps':steps, 'media':workout_media}
     return render(request, "api/workout.html", context)
 
 @csrf_protect
