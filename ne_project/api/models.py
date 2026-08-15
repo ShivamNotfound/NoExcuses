@@ -52,7 +52,7 @@ class Steps(models.Model):
     workout = models.ForeignKey(Workout, on_delete = models.CASCADE, related_name="steps")
     step_number = models.PositiveSmallIntegerField()
     instruction = models.TextField(max_length = 200)
-    image_url = models.ImageField(upload_to = "steps")
+    image_url = models.ImageField(upload_to = "steps", null=True, blank=True)
 class WorkoutMedia(models.Model):
     class TypeChoices(models.TextChoices):
         IMAGE = 'image', 'image'

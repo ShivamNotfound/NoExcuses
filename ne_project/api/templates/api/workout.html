@@ -8,7 +8,7 @@
         <center>
         {% for med in media %}
         {% if med.type == 'image' %}
-        <img src="{{med.g_url.url}}" alt="" class="medias">
+        <img src="{{med.g_url.url}}" alt="" class="medias" width="40%" height="400px">
         {% else %}
         <video controls class="medias" width="40%" height="400px">
             <source src="{{med.g_url.url}}" type="video/mp4">
@@ -22,8 +22,10 @@
 
         {% for step in steps %}
         <div class="step">{{step.step_number}}.{{step.instruction}}</div>
+        {% if step.image_url.url is not "" %}
         <center>
             <img src={{step.image_url.url}} class="step_images">
         </center>
+        {% endif %}
         {% endfor %}
 {% endblock %}

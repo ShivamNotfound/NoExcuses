@@ -20,6 +20,7 @@ body
     margin-top:25px;
     font-size:40px;
     color:rgb(195, 195, 195);
+    margin-left:40px;
 }
 
 .step
@@ -28,7 +29,8 @@ body
     margin-top:22px;
     margin-bottom:22px;
     font-size:20px;
-    margin-left:35px;
+    margin-left: 50px;
+}
 
 .step_images
 {
