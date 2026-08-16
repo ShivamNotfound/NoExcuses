@@ -8,6 +8,7 @@
 
 #muscle_container{
     display:flex;
+    margin-left:25px;
 }
 
 
@@ -108,6 +109,7 @@
 #sort_form
 {
     margin-top:10px;
+    margin-left:25px;
     display:flex;
     justify-content: space-between;
     width:15%;

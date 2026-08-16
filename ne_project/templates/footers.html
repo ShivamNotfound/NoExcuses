@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'footers.css' %}">
+</head>
+<body>
+    <div id="footer_container">
+        <div id="upper_footer">
+            <div id="logo_container">
+                Logo
+            </div>
+            <div id="navigation_container">
+                <div onclick="window.location.href=`{% url 'home' %}`" class="foot_item">Home</div>
+                <div onclick="window.location.href=`{% url 'select_equipment' %}`" class="foot_item">Equipments</div>
+                <div>About</div>
+                {% if user.is_authenticated %}
+                <div onclick = "window.location.href = '{% url 'logout' %}'" class="foot_item">Logout</div>
+                {% else %}
+                <div onclick = "window.location.href = '{% url 'login' %}'" class="foot_item">Login/Register</div>
+                {% endif %}
+            </div>
+            <div id="contacts_container">
+                <div onclick="window.location.href='https://www.linkedin.com/in/yashrajv/'" class="foot_item">Linkedin</div>
+                <div onclick="window.location.href='https://github.com/ShivamNotfound'" class="foot_item">GitHub</div>
+                <div class="foot_item">Email</div>
+                <div>Instagram</div>
+            </div>
+        </div>
+        <hr>
+        <div id = "lower_footer">
+            <center>
+            <div id="credit">
+                Made with ❤️ by Yash
+            </div>
+            </center>
+            <div id="copyright">
+                © 2026 NoExcuses. All rights reserved.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
