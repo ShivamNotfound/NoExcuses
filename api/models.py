@@ -58,7 +58,7 @@ class WorkoutMedia(models.Model):
         IMAGE = 'image', 'image'
         VIDEO = 'video', 'video'
     workout = models.ForeignKey(Workout, on_delete= models.CASCADE, related_name = "workout_media")
-    g_url = models.FileField(upload_to="work_media")
+    g_url = models.ImageField(upload_to="work_media")
     type = models.CharField(choices = TypeChoices, max_length = 20)
     category = models.CharField(max_length = 30)
     caption = models.CharField(max_length = 50)

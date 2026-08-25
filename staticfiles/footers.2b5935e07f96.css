@@ -1,0 +1,61 @@
+body{
+    margin:0px;
+}
+#footer_container
+{
+    height:320px;
+    width: 100%;
+    background-color:black;
+    margin-top:150px;
+}
+#logo_container
+{
+    width:35%;
+    font-size:45px;
+    margin-top:50px;
+    margin-bottom:50px;
+    font-weight:bolder;
+}
+#upper_footer
+{
+    width:70%;
+    height:65%;
+    color:aliceblue;
+    display:flex;
+    justify-content: space-evenly;
+}
+#navigation_container
+{
+    display:flex;
+    flex-direction:column;
+    margin-top:50px;
+    justify-content: space-evenly;
+    margin-bottom:45px;
+}
+#contacts_container
+{
+    display:flex;
+    flex-direction:column;
+    margin-top:50px;
+    justify-content: space-evenly;
+    margin-bottom:45px;
+}
+#credit
+{
+    color:aliceblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:17px;
+    margin-top:10px;
+}
+
+#copyright
+{
+    color:aliceblue;
+    margin-top:20px;
+    margin-left:25px;
+}
+
+.foot_item:hover
+{
+    cursor:pointer;
+}

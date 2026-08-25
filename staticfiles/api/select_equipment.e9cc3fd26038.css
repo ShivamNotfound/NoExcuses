@@ -1,0 +1,122 @@
+#search_bar{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(222, 219, 219);
+    font-size: 20px;
+    border:1px solid black;
+    width:40%;
+    min-width:200px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+    padding-left:25px;
+    border-radius:35px;
+    background-color:black;
+    border-left:rgb(57, 57, 57) 1px solid;
+    border-top:rgba(75, 75, 75) 1px solid;
+}
+#search_bar:focus{
+    outline:none;
+}
+#search_label{
+    visibility: hidden;
+}
+#search_bar_container{
+    display:flex;
+    padding-left:36%;
+    justify-content:space-between;
+}
+#muscle_percent
+{
+    margin-right:10%;
+    color:white;
+}
+
+.equipment_cards{
+    border:1px solid white;
+    padding:20px;
+    width:25%;
+    margin-bottom:30px;
+    margin-left:30px;
+    height:180px;
+    border-radius:20px;
+    transition: box-shadow 0.3s;
+}
+
+.equipment_card_box{
+    display:none;
+}
+
+#equipement_container
+{
+    margin:30px;
+    display:flex;
+    flex-direction: row;
+    margin-left:40px;
+    margin-right:40px;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+
+.equipment_name{
+    margin-top:30px;
+    font-family: sans-serif;
+    font-size:25px;
+    color:rgb(222, 219, 219);
+    transition: 0.3s;
+}
+
+.equipment_count{
+    color:rgb(222, 219, 219);
+    font-size:50px;
+    margin-top:25px;
+    transition: 0.3s;
+}
+
+.equipment_cards:hover{
+    cursor:pointer;
+}
+
+.equipment_cards:hover .equipment_name{
+    transform: scale(1.2);
+}
+.equipment_cards:hover .equipment_count{
+    transform: scale(1.2);
+}
+
+.equipment_card_box:checked + label{
+    box-shadow: rgb(76, 154, 69) 10px 10px 1px,red -10px -10px 1px;
+}
+
+#donebtn{
+    position:fixed;
+    right:0;
+    bottom:5%;
+    padding:10px;
+    font-size:30px;
+    padding-left:25px;
+    padding-right:20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border:1px black solid;
+    background-color: black; 
+    color:rgb(222, 219, 219);
+    transition:0.3s;
+}
+
+#donebtn:hover{
+    padding-right:30px;
+    padding-left:35px;
+    cursor: pointer;
+    background-color: rgb(76, 154, 69);
+    color:black;
+}
+
+#percent
+{
+    font-size:38px;
+    margin:3px;
+}
+#muscle_percent
+{
+    font-size:20px;
+}

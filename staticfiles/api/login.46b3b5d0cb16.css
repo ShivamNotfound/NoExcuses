@@ -1,0 +1,87 @@
+label{
+    color:rgb(154, 154, 154);
+    display:none;
+}
+
+
+#form_container
+{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    width:30%;
+    padding:40px;
+    margin-left:35%;
+    min-width:250px;
+    border-radius:20px;
+    box-shadow: 0 0 4px white;
+
+}
+
+#form_title
+{
+    color:rgb(198, 198, 198);
+    font-size: 40px;
+    margin-left:0;
+    margin-bottom:20px;
+}
+
+input{
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:14px;
+    border-radius:9px;
+    width:50%;
+    margin-left:10px;
+    background-color: rgb(49, 49, 49);
+    color:rgb(211, 211, 211);
+    border:none;
+    min-width: 100px;
+}
+
+input:focus
+{
+    outline:none;
+}
+
+#done_btn
+{
+    background-color:rgb(49, 49, 49);
+    border:none;
+    color:rgb(207, 207, 207);
+    border-radius:18px;
+    padding:3px;
+    margin-left:70%;
+    min-width:90px;
+}
+#done_btn div
+{
+    transition:0.3s;
+    border-radius:13px;
+    padding:5px;
+    padding-top:9px;
+    padding-bottom:9px;
+    font-size:18px;
+}
+#done_btn div:hover
+{
+    background-color: rgb(30, 30, 30);
+    cursor:pointer;
+}
+
+
+#switch_auth
+{
+    margin-top:14px;
+    margin-bottom:14px;
+    color:rgb(198, 198, 198);
+    margin-left:12px;
+    font-size:15px;
+    text-decoration: underline;
+}
+
+#switch_auth:hover
+{
+    cursor:pointer;
+}
