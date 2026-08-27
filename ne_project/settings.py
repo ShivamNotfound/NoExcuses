@@ -17,7 +17,7 @@ env = Env()
 Env.read_env()
 
 ENVIRONMENT = env('ENVIRONMENT', default="production")
-#ENVIRONMENT = 'production'
+ENVIRONMENT = 'production'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -88,17 +88,22 @@ WSGI_APPLICATION = 'ne_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ne_project',
-        'USER': 'root',
-        'PASSWORD':'SS@2006210',
-        'HOST': 'localhost',
-        'PORT': 3306,
+if ENVIRONMENT == 'development':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'ne_project',
+            'USER': 'root',
+            'PASSWORD':'SS@2006210',
+            'HOST': 'localhost',
+            'PORT': 3306,
+        }
     }
-}
-
+else:
+    import dj_database_url
+    DATABASES = {
+        'default':dj_database_url.parse(env('DATABASE_URL'))
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
