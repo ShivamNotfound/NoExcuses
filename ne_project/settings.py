@@ -17,7 +17,6 @@ env = Env()
 Env.read_env()
 
 ENVIRONMENT = env('ENVIRONMENT', default="production")
-ENVIRONMENT = 'production'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,7 +34,9 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','*']
+ALLOWED_HOSTS = ['localhost','noexcuses-qjae.onrender.com']
+
+CSRF_TRUSTED_ORIGINS = 'https://noexcuses-qjae.onrender.com'
 
 
 # Application definition
