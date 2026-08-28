@@ -36,7 +36,7 @@ else:
 
 ALLOWED_HOSTS = ['localhost','noexcuses-qjae.onrender.com']
 
-CSRF_TRUSTED_ORIGINS = 'https://noexcuses-qjae.onrender.com'
+CSRF_TRUSTED_ORIGINS = ['https://noexcuses-qjae.onrender.com']
 
 
 # Application definition
