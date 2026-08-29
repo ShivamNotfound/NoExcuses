@@ -5,7 +5,7 @@
 {% load static %}
         <link rel="stylesheet" href="{% static 'api/login.css' %}">
         
-        <form method="POST" action="/login/">
+        <form method="POST">
             {% csrf_token %}
             <div id="form_container">
             <div id="form_title">Register</div>

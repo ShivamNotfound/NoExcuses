@@ -123,7 +123,6 @@ def register(request):
             profile.save()
             return redirect("login")
         else:
-            print('nope')
             return redirect("register")
         
     return render(request, "api/register.html")
