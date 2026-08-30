@@ -14,7 +14,7 @@
         {% csrf_token %}
     <div id="equipement_container">
         {% for equipment in equipments %}
-        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id }}" class="equipment_card_box">
+        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id }}" class="equipment_card_box" {% if equipment.name == "No equipments" %}checked{% endif %}>
         <label for="{{equipment.id}}" class="equipment_cards" name="{{equipment}}">
         <center>
         <div class="equipment_count">
