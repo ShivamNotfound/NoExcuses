@@ -85,3 +85,8 @@ input:focus
 {
     cursor:pointer;
 }
+
+#error_msg
+{
+    color:rgb(198, 198, 198);
+}

@@ -97,6 +97,7 @@ def workout_page(request, workout_id):
 
 @csrf_protect
 def login(request):
+    error = ""
     if request.method == 'POST':
         mail = request.POST.get('email')
         password = request.POST.get('password')
@@ -104,15 +105,18 @@ def login(request):
         if user is not None:
             auth_login(request, user)
             return redirect("home")
-        return redirect("login")
-    return render(request, "api/login.html")
+        context = {"error" : "Invalid credentials"}
+        return render(request, "api/login.html", context)
+    context = {"error":error}
+    return render(request, "api/login.html", context)
 
 @csrf_protect
 def register(request):
+    context = {"error":""}
     if request.method == 'POST':
         mail = request.POST.get('email')
         password = request.POST.get('password')
-        if len(list(User.objects.filter(username = mail, password = password))) == 0:
+        if len(list(User.objects.filter(username = mail))) == 0:
             user = User.objects.create_user(username = mail, password = password)
             ids = request.session.get("equipement_ids", -1)
             if ids == -1:
@@ -123,9 +127,10 @@ def register(request):
             profile.save()
             return redirect("login")
         else:
-            return redirect("register")
+            context["error"] = "User already exists"
+            return render(request, "api/register.html", context)
         
-    return render(request, "api/register.html")
+    return render(request, "api/register.html", context)
 
 def logout(request):
     auth_logout(request)

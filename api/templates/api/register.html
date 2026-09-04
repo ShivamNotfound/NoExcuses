@@ -13,6 +13,7 @@
             <input type="email" id="email" name="email" placeholder="Email">
             <label for="password" id="password_label" >Password:</label>
             <input type="password" id="password" name="password" placeholder="Password">
+            <p id="error_msg">{{error}}</p>
             <div onclick = "window.location.href = '{% url 'login' %}'" id="switch_auth">Login</div>
             <button type="submit" id="done_btn">
                 <div>
