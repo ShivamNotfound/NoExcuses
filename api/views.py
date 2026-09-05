@@ -40,6 +40,11 @@ def equipment_selection(request):
         for w in works:
             res.extend(workouts.get(id = w).sub_muscle.values_list('id', flat=True))
         equipment_data[e.id] = list(set(res))
+    if request.user.is_authenticated:
+        user_equipments = list(Profile.objects.get(user = request.user).equipment_ids)
+    else:
+        user_equipments = request.session.get('equipment_ids', [])
+    user_equipments = list(map(int, user_equipments))
     if request.method == 'POST':
         ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
         if request.user.is_authenticated:
@@ -49,7 +54,7 @@ def equipment_selection(request):
         else:
             request.session['equipment_ids'] = ids
         return redirect("home")
-    context = {"equipments": equipments,'sub_data':equipment_data}        
+    context = {"equipments": equipments,'sub_data':equipment_data, 'user_equipments':user_equipments}        
     return render(request, 'api/select_equipment.html', context)
 
 @csrf_protect
@@ -125,7 +130,7 @@ def register(request):
                 profile = Profile.objects.create(user = user, equipement_ids = ids)
             user.save()
             profile.save()
-            return redirect("login")
+            return redirect("select_equipment")
         else:
             context["error"] = "User already exists"
             return render(request, "api/register.html", context)
@@ -133,5 +138,7 @@ def register(request):
     return render(request, "api/register.html", context)
 
 def logout(request):
+    equipment_ids = request.session.get("equipment_ids", [])
     auth_logout(request)
+    request.session["equipment_ids"] = equipment_ids
     return redirect("home")

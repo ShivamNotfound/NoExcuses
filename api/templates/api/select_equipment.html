@@ -3,6 +3,7 @@
 {% load static %}
 {% load custom_tags %}
     <link rel="stylesheet" href="{% static 'api/select_equipment.css' %}">
+    <div id = "workouts_count">Select the things you have</div>
         <div id="search_bar_container">
             <input id="search_bar" placeholder="Search" name="search_value">
             <div id="muscle_percent">
@@ -14,7 +15,7 @@
         {% csrf_token %}
     <div id="equipement_container">
         {% for equipment in equipments %}
-        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id }}" class="equipment_card_box" {% if equipment.name == "No equipments" %}checked{% endif %}>
+        <input type = "checkbox" value="{{equipment.id}}" name="{{equipment.id}}" id="{{equipment.id }}" class="equipment_card_box" {% if equipment.name == "No equipments" or equipment.id in user_equipments %}checked{% endif %}>
         <label for="{{equipment.id}}" class="equipment_cards" name="{{equipment}}">
         <center>
         <div class="equipment_count">
