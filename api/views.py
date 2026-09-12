@@ -6,6 +6,8 @@ from django.views import generic
 from .models import Equipment, MuscleGroup, Workout, SubMuscle, Profile
 from django.contrib.auth.models import User
 from django.contrib.auth import login as auth_login, logout as auth_logout, authenticate
+from .serializers import WorkoutSerializer, StepsSerializer
+from rest_framework import generics
 
 class Home(generic.ListView): 
     model = MuscleGroup
@@ -142,3 +144,10 @@ def logout(request):
     auth_logout(request)
     request.session["equipment_ids"] = equipment_ids
     return redirect("home")
+
+
+class WorkoutCreateAPIView(generics.CreateAPIView):
+    serializer_class = WorkoutSerializer
+
+class StepsCreateAPIView(generics.CreateAPIView):
+    serializer_class = StepsSerializer

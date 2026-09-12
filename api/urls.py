@@ -8,4 +8,6 @@ urlpatterns = [path("home/", views.Home.as_view(), name = "home"),
                path("login/", views.login, name="login"),
                path("register/", views.register, name="register"),
                path("logout/", views.logout, name="logout"),
+               path("create_workout/", views.WorkoutCreateAPIView.as_view(), name="create_workout"),
+               path("create_steps/", views.StepsCreateAPIView.as_view(), name="steps_workout"),
                ]
