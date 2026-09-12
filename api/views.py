@@ -151,3 +151,7 @@ class WorkoutCreateAPIView(generics.CreateAPIView):
 
 class StepsCreateAPIView(generics.CreateAPIView):
     serializer_class = StepsSerializer
+
+class WorkoutListAPIView(generics.ListAPIView):
+    serializer_class = WorkoutSerializer
+    queryset = Workout.objects.all()

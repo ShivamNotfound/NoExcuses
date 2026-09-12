@@ -31,7 +31,7 @@ class Workout(models.Model):
     difficulty = models.PositiveSmallIntegerField(
         validators = [MinValueValidator(0), MaxValueValidator(2)]
     )
-    description = models.TextField(max_length = 500)
+    description = models.TextField(max_length = 1000)
     equipment = models.ManyToManyField(Equipment, related_name = "workouts")
     sub_muscle = models.ManyToManyField(SubMuscle, related_name = 'workouts')
     type = models.CharField(choices = TypeChoices, max_length = 20)
