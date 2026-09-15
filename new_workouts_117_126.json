@@ -1,0 +1,847 @@
+[
+  {
+    "model": "api.workout",
+    "pk": 137,
+    "fields": {
+      "name": "Barbell Good Morning",
+      "difficulty": 2,
+      "description": "The barbell good morning is a compound hip-hinge exercise that primarily targets the hamstrings, gluteus maximus, and lower back. The bar is kept across the upper back while the hips move backward and the torso inclines under control. It is useful for developing posterior-chain strength and improving hip-hinge mechanics.",
+      "type": "compound",
+      "strength_score": 8,
+      "hypertrophy_score": 8,
+      "endurance_score": 6,
+      "equipment": [
+        21,
+        6,
+        7,
+        18,
+        13,
+        14,
+        19
+      ],
+      "sub_muscle": [
+        16,
+        25,
+        34
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 842,
+    "fields": {
+      "workout": 137,
+      "step_number": 1,
+      "instruction": "Place the barbell across your upper back and stand with your feet about shoulder-width apart.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 843,
+    "fields": {
+      "workout": 137,
+      "step_number": 2,
+      "instruction": "Brace your core, keep a neutral spine, and soften your knees slightly.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 844,
+    "fields": {
+      "workout": 137,
+      "step_number": 3,
+      "instruction": "Push your hips backward while keeping your chest controlled and your back flat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 845,
+    "fields": {
+      "workout": 137,
+      "step_number": 4,
+      "instruction": "Lower your torso until you feel a strong stretch in your hamstrings without rounding your back.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 846,
+    "fields": {
+      "workout": 137,
+      "step_number": 5,
+      "instruction": "Drive your hips forward and squeeze your glutes to return to the upright position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 847,
+    "fields": {
+      "workout": 137,
+      "step_number": 6,
+      "instruction": "Repeat for the desired number of repetitions with slow, controlled movement.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 138,
+    "fields": {
+      "name": "Dumbbell Floor Press",
+      "difficulty": 1,
+      "description": "The dumbbell floor press is a compound pressing exercise performed from the floor that primarily targets the middle chest. The floor limits the range of motion at the bottom, allowing the chest and triceps to work through a controlled pressing pattern without requiring a bench. It is useful for developing upper-body pressing strength and muscle mass.",
+      "type": "compound",
+      "strength_score": 8,
+      "hypertrophy_score": 8,
+      "endurance_score": 5,
+      "equipment": [
+        6,
+        7,
+        18,
+        13,
+        14,
+        21
+      ],
+      "sub_muscle": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 848,
+    "fields": {
+      "workout": 138,
+      "step_number": 1,
+      "instruction": "Lie on your back with your knees bent and your feet flat on the floor.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 849,
+    "fields": {
+      "workout": 138,
+      "step_number": 2,
+      "instruction": "Hold a dumbbell in each hand with your elbows resting lightly on the floor and your palms facing forward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 850,
+    "fields": {
+      "workout": 138,
+      "step_number": 3,
+      "instruction": "Brace your core and press the dumbbells upward until your arms are nearly straight.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 851,
+    "fields": {
+      "workout": 138,
+      "step_number": 4,
+      "instruction": "Keep your wrists stacked over your elbows and avoid letting the weights drift excessively outward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 852,
+    "fields": {
+      "workout": 138,
+      "step_number": 5,
+      "instruction": "Lower the dumbbells under control until your upper arms gently contact the floor.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 853,
+    "fields": {
+      "workout": 138,
+      "step_number": 6,
+      "instruction": "Press the dumbbells back up and repeat for the desired number of repetitions.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 139,
+    "fields": {
+      "name": "Dumbbell Renegade Row",
+      "difficulty": 2,
+      "description": "The dumbbell renegade row is a compound pulling and stability exercise that primarily targets the lats and upper back while requiring strong full-body bracing. From a high plank position, one arm rows a dumbbell while the other supports the body. It is useful for developing back strength, anti-rotation control, and core stability.",
+      "type": "compound",
+      "strength_score": 8,
+      "hypertrophy_score": 8,
+      "endurance_score": 7,
+      "equipment": [
+        6,
+        13,
+        7,
+        18
+      ],
+      "sub_muscle": [
+        13,
+        15
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 854,
+    "fields": {
+      "workout": 139,
+      "step_number": 1,
+      "instruction": "Place two stable weights on the floor slightly wider than shoulder-width apart and assume a high plank with your hands gripping them.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 855,
+    "fields": {
+      "workout": 139,
+      "step_number": 2,
+      "instruction": "Position your feet wider than hip-width apart to improve balance and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 856,
+    "fields": {
+      "workout": 139,
+      "step_number": 3,
+      "instruction": "Keep your body in a straight line and shift your weight slightly onto one arm.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 857,
+    "fields": {
+      "workout": 139,
+      "step_number": 4,
+      "instruction": "Row the opposite weight toward your lower ribs while keeping your elbow close to your torso.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 858,
+    "fields": {
+      "workout": 139,
+      "step_number": 5,
+      "instruction": "Lower the weight under control, then repeat the row on the opposite side without twisting your hips.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 859,
+    "fields": {
+      "workout": 139,
+      "step_number": 6,
+      "instruction": "Continue alternating sides for the desired number of repetitions.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 140,
+    "fields": {
+      "name": "Reverse Lunge",
+      "difficulty": 1,
+      "description": "The reverse lunge is a compound unilateral lower-body exercise that primarily targets the quadriceps and gluteus maximus while also involving the hamstrings and improving balance. Stepping backward reduces the forward momentum of the movement and allows the working leg to control the descent and ascent. It is useful for developing single-leg strength and lower-body coordination.",
+      "type": "compound",
+      "strength_score": 7,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
+      "equipment": [
+        5,
+        6,
+        7,
+        18,
+        13,
+        14,
+        19
+      ],
+      "sub_muscle": [
+        25,
+        33,
+        34
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 860,
+    "fields": {
+      "workout": 140,
+      "step_number": 1,
+      "instruction": "Stand upright with your feet about hip-width apart and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 861,
+    "fields": {
+      "workout": 140,
+      "step_number": 2,
+      "instruction": "Step one leg backward and place the ball of your foot on the floor.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 862,
+    "fields": {
+      "workout": 140,
+      "step_number": 3,
+      "instruction": "Bend both knees and lower your body until the front thigh is near parallel with the floor.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 863,
+    "fields": {
+      "workout": 140,
+      "step_number": 4,
+      "instruction": "Keep the front knee tracking in line with the foot while maintaining an upright torso.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 864,
+    "fields": {
+      "workout": 140,
+      "step_number": 5,
+      "instruction": "Push through the front foot to return to the starting position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 865,
+    "fields": {
+      "workout": 140,
+      "step_number": 6,
+      "instruction": "Alternate legs or complete all repetitions on one side before switching.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 141,
+    "fields": {
+      "name": "Curtsy Lunge",
+      "difficulty": 1,
+      "description": "The curtsy lunge is a compound unilateral leg exercise that primarily targets the gluteus maximus while also training the quadriceps and adductors. The rear leg steps diagonally behind the body, creating a different loading angle for the hips and thighs. It is useful for developing lower-body strength, balance, and controlled single-leg movement.",
+      "type": "compound",
+      "strength_score": 7,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
+      "equipment": [
+        5,
+        6,
+        7,
+        18,
+        13,
+        14,
+        19
+      ],
+      "sub_muscle": [
+        25,
+        33,
+        35
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 866,
+    "fields": {
+      "workout": 141,
+      "step_number": 1,
+      "instruction": "Stand tall with your feet about hip-width apart and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 867,
+    "fields": {
+      "workout": 141,
+      "step_number": 2,
+      "instruction": "Step one leg diagonally backward and behind the standing leg.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 868,
+    "fields": {
+      "workout": 141,
+      "step_number": 3,
+      "instruction": "Bend both knees and lower your hips while keeping most of your weight on the front leg.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 869,
+    "fields": {
+      "workout": 141,
+      "step_number": 4,
+      "instruction": "Keep the front knee aligned with the foot and avoid collapsing inward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 870,
+    "fields": {
+      "workout": 141,
+      "step_number": 5,
+      "instruction": "Drive through the front foot and return to the starting position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 871,
+    "fields": {
+      "workout": 141,
+      "step_number": 6,
+      "instruction": "Repeat on the opposite side for the desired number of repetitions.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 142,
+    "fields": {
+      "name": "Sissy Squat",
+      "difficulty": 1,
+      "description": "The sissy squat is a bodyweight lower-body exercise that primarily targets the quadriceps through a deep knee-dominant movement. Keeping the hips extended while allowing the knees to travel forward increases the demand on the front of the thighs. A wall or sturdy support can be used for balance.",
+      "type": "isolated",
+      "strength_score": 6,
+      "hypertrophy_score": 7,
+      "endurance_score": 8,
+      "equipment": [
+        5,
+        10,
+        1,
+        3
+      ],
+      "sub_muscle": [
+        33
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 872,
+    "fields": {
+      "workout": 142,
+      "step_number": 1,
+      "instruction": "Stand upright with your feet about hip-width apart and lightly hold a sturdy support for balance if needed.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 873,
+    "fields": {
+      "workout": 142,
+      "step_number": 2,
+      "instruction": "Rise onto the balls of your feet and keep your torso upright.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 874,
+    "fields": {
+      "workout": 142,
+      "step_number": 3,
+      "instruction": "Brace your core and slowly bend your knees while allowing them to travel forward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 875,
+    "fields": {
+      "workout": 142,
+      "step_number": 4,
+      "instruction": "Lower your body under control while keeping your hips extended and your torso relatively straight.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 876,
+    "fields": {
+      "workout": 142,
+      "step_number": 5,
+      "instruction": "Drive through the balls of your feet and contract your quadriceps to return to the starting position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 877,
+    "fields": {
+      "workout": 142,
+      "step_number": 6,
+      "instruction": "Repeat with controlled tempo and only use a range of motion you can perform safely.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 143,
+    "fields": {
+      "name": "Mountain Climbers",
+      "difficulty": 1,
+      "description": "Mountain climbers are a dynamic bodyweight exercise that combines a high-plank position with alternating knee drives. They primarily challenge the abdominal muscles and obliques while also demanding shoulder and hip stability. The continuous movement makes them useful for developing core endurance and full-body conditioning.",
+      "type": "compound",
+      "strength_score": 6,
+      "hypertrophy_score": 4,
+      "endurance_score": 10,
+      "equipment": [
+        5
+      ],
+      "sub_muscle": [
+        20,
+        21,
+        24
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 878,
+    "fields": {
+      "workout": 143,
+      "step_number": 1,
+      "instruction": "Start in a high-plank position with your hands beneath your shoulders and your body in a straight line.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 879,
+    "fields": {
+      "workout": 143,
+      "step_number": 2,
+      "instruction": "Brace your core and keep your hips level with the floor.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 880,
+    "fields": {
+      "workout": 143,
+      "step_number": 3,
+      "instruction": "Drive one knee toward your chest while keeping the opposite leg extended.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 881,
+    "fields": {
+      "workout": 143,
+      "step_number": 4,
+      "instruction": "Quickly return that foot while bringing the opposite knee toward your chest.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 882,
+    "fields": {
+      "workout": 143,
+      "step_number": 5,
+      "instruction": "Continue alternating your legs in a smooth, controlled rhythm.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 883,
+    "fields": {
+      "workout": 143,
+      "step_number": 6,
+      "instruction": "Maintain a stable upper body and consistent breathing throughout the set.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 144,
+    "fields": {
+      "name": "Bear Crawl",
+      "difficulty": 1,
+      "description": "The bear crawl is a compound bodyweight movement performed on the hands and feet with the knees hovering above the floor. It primarily trains the transverse abdominis and obliques while demanding coordinated shoulder and hip stability. It is useful for developing core endurance, whole-body control, and movement coordination.",
+      "type": "compound",
+      "strength_score": 6,
+      "hypertrophy_score": 4,
+      "endurance_score": 10,
+      "equipment": [
+        5
+      ],
+      "sub_muscle": [
+        22,
+        23,
+        24
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 884,
+    "fields": {
+      "workout": 144,
+      "step_number": 1,
+      "instruction": "Start on your hands and knees with your hands under your shoulders.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 885,
+    "fields": {
+      "workout": 144,
+      "step_number": 2,
+      "instruction": "Lift your knees a few centimeters off the floor while keeping your back flat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 886,
+    "fields": {
+      "workout": 144,
+      "step_number": 3,
+      "instruction": "Move your right hand and left foot forward a short distance.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 887,
+    "fields": {
+      "workout": 144,
+      "step_number": 4,
+      "instruction": "Follow by moving your left hand and right foot forward while keeping your knees hovering.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 888,
+    "fields": {
+      "workout": 144,
+      "step_number": 5,
+      "instruction": "Continue crawling forward with controlled, opposite-limb movement.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 889,
+    "fields": {
+      "workout": 144,
+      "step_number": 6,
+      "instruction": "Keep your core braced and your hips as level as possible throughout the movement.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 145,
+    "fields": {
+      "name": "Dumbbell Split Squat",
+      "difficulty": 1,
+      "description": "The dumbbell split squat is a unilateral lower-body exercise that primarily targets the quadriceps and gluteus maximus while also involving the hamstrings and adductors. Unlike the Bulgarian split squat, both feet remain on the floor, allowing a stable stance while each leg contributes independently. It is useful for developing leg strength, balance, and muscle mass.",
+      "type": "compound",
+      "strength_score": 8,
+      "hypertrophy_score": 8,
+      "endurance_score": 8,
+      "equipment": [
+        6,
+        7,
+        18,
+        13,
+        14,
+        19
+      ],
+      "sub_muscle": [
+        25,
+        33,
+        34,
+        35
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 890,
+    "fields": {
+      "workout": 145,
+      "step_number": 1,
+      "instruction": "Stand in a staggered stance with one foot several steps in front of the other and hold the weights at your sides.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 891,
+    "fields": {
+      "workout": 145,
+      "step_number": 2,
+      "instruction": "Brace your core and keep most of your weight through the front leg.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 892,
+    "fields": {
+      "workout": 145,
+      "step_number": 3,
+      "instruction": "Bend both knees and lower your hips straight down under control.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 893,
+    "fields": {
+      "workout": 145,
+      "step_number": 4,
+      "instruction": "Keep your front foot planted and your torso upright or slightly inclined forward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 894,
+    "fields": {
+      "workout": 145,
+      "step_number": 5,
+      "instruction": "Drive through the front foot to return to the starting position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 895,
+    "fields": {
+      "workout": 145,
+      "step_number": 6,
+      "instruction": "Complete the desired repetitions and switch sides.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 146,
+    "fields": {
+      "name": "Dumbbell Front Squat",
+      "difficulty": 1,
+      "description": "The dumbbell front squat is a compound lower-body exercise that primarily targets the quadriceps while also training the gluteus maximus and adductors. Holding the dumbbells in front of the body encourages an upright torso and creates a front-loaded squat pattern. It is useful for developing leg strength and muscle mass with accessible home equipment.",
+      "type": "compound",
+      "strength_score": 8,
+      "hypertrophy_score": 8,
+      "endurance_score": 7,
+      "equipment": [
+        6,
+        7,
+        18,
+        13,
+        14,
+        19
+      ],
+      "sub_muscle": [
+        25,
+        33,
+        35
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 896,
+    "fields": {
+      "workout": 146,
+      "step_number": 1,
+      "instruction": "Stand with your feet about shoulder-width apart and hold the weights near the front of your shoulders.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 897,
+    "fields": {
+      "workout": 146,
+      "step_number": 2,
+      "instruction": "Brace your core and keep your chest lifted while maintaining a stable stance.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 898,
+    "fields": {
+      "workout": 146,
+      "step_number": 3,
+      "instruction": "Bend your knees and hips together to lower into a squat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 899,
+    "fields": {
+      "workout": 146,
+      "step_number": 4,
+      "instruction": "Keep your knees tracking over your feet and maintain an upright torso as you descend.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 900,
+    "fields": {
+      "workout": 146,
+      "step_number": 5,
+      "instruction": "Drive through your feet and extend your hips and knees to stand back up.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 901,
+    "fields": {
+      "workout": 146,
+      "step_number": 6,
+      "instruction": "Repeat for the desired number of repetitions with controlled depth and tempo.",
+      "image_url": ""
+    }
+  }
+]
