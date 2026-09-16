@@ -1,448 +1,158 @@
 [
   {
     "model": "api.workout",
-    "pk": 137,
+    "pk": 227,
     "fields": {
-      "name": "Barbell Good Morning",
-      "difficulty": 2,
-      "description": "The barbell good morning is a compound hip-hinge exercise that primarily targets the hamstrings, gluteus maximus, and lower back. The bar is kept across the upper back while the hips move backward and the torso inclines under control. It is useful for developing posterior-chain strength and improving hip-hinge mechanics.",
-      "type": "compound",
-      "strength_score": 8,
-      "hypertrophy_score": 8,
-      "endurance_score": 6,
-      "equipment": [
-        21,
-        6,
-        7,
-        18,
-        13,
-        14,
-        19
-      ],
-      "sub_muscle": [
-        16,
-        25,
-        34
-      ]
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 842,
-    "fields": {
-      "workout": 137,
-      "step_number": 1,
-      "instruction": "Place the barbell across your upper back and stand with your feet about shoulder-width apart.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 843,
-    "fields": {
-      "workout": 137,
-      "step_number": 2,
-      "instruction": "Brace your core, keep a neutral spine, and soften your knees slightly.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 844,
-    "fields": {
-      "workout": 137,
-      "step_number": 3,
-      "instruction": "Push your hips backward while keeping your chest controlled and your back flat.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 845,
-    "fields": {
-      "workout": 137,
-      "step_number": 4,
-      "instruction": "Lower your torso until you feel a strong stretch in your hamstrings without rounding your back.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 846,
-    "fields": {
-      "workout": 137,
-      "step_number": 5,
-      "instruction": "Drive your hips forward and squeeze your glutes to return to the upright position.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 847,
-    "fields": {
-      "workout": 137,
-      "step_number": 6,
-      "instruction": "Repeat for the desired number of repetitions with slow, controlled movement.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.workout",
-    "pk": 138,
-    "fields": {
-      "name": "Dumbbell Floor Press",
+      "name": "Doorway Rear Delt Row",
       "difficulty": 1,
-      "description": "The dumbbell floor press is a compound pressing exercise performed from the floor that primarily targets the middle chest. The floor limits the range of motion at the bottom, allowing the chest and triceps to work through a controlled pressing pattern without requiring a bench. It is useful for developing upper-body pressing strength and muscle mass.",
-      "type": "compound",
-      "strength_score": 8,
-      "hypertrophy_score": 8,
-      "endurance_score": 5,
-      "equipment": [
-        6,
-        7,
-        18,
-        13,
-        14,
-        21
-      ],
-      "sub_muscle": [
-        3
-      ]
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 848,
-    "fields": {
-      "workout": 138,
-      "step_number": 1,
-      "instruction": "Lie on your back with your knees bent and your feet flat on the floor.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 849,
-    "fields": {
-      "workout": 138,
-      "step_number": 2,
-      "instruction": "Hold a dumbbell in each hand with your elbows resting lightly on the floor and your palms facing forward.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 850,
-    "fields": {
-      "workout": 138,
-      "step_number": 3,
-      "instruction": "Brace your core and press the dumbbells upward until your arms are nearly straight.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 851,
-    "fields": {
-      "workout": 138,
-      "step_number": 4,
-      "instruction": "Keep your wrists stacked over your elbows and avoid letting the weights drift excessively outward.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 852,
-    "fields": {
-      "workout": 138,
-      "step_number": 5,
-      "instruction": "Lower the dumbbells under control until your upper arms gently contact the floor.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 853,
-    "fields": {
-      "workout": 138,
-      "step_number": 6,
-      "instruction": "Press the dumbbells back up and repeat for the desired number of repetitions.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.workout",
-    "pk": 139,
-    "fields": {
-      "name": "Dumbbell Renegade Row",
-      "difficulty": 2,
-      "description": "The dumbbell renegade row is a compound pulling and stability exercise that primarily targets the lats and upper back while requiring strong full-body bracing. From a high plank position, one arm rows a dumbbell while the other supports the body. It is useful for developing back strength, anti-rotation control, and core stability.",
-      "type": "compound",
-      "strength_score": 8,
-      "hypertrophy_score": 8,
-      "endurance_score": 7,
-      "equipment": [
-        6,
-        13,
-        7,
-        18
-      ],
-      "sub_muscle": [
-        13,
-        15
-      ]
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 854,
-    "fields": {
-      "workout": 139,
-      "step_number": 1,
-      "instruction": "Place two stable weights on the floor slightly wider than shoulder-width apart and assume a high plank with your hands gripping them.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 855,
-    "fields": {
-      "workout": 139,
-      "step_number": 2,
-      "instruction": "Position your feet wider than hip-width apart to improve balance and brace your core.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 856,
-    "fields": {
-      "workout": 139,
-      "step_number": 3,
-      "instruction": "Keep your body in a straight line and shift your weight slightly onto one arm.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 857,
-    "fields": {
-      "workout": 139,
-      "step_number": 4,
-      "instruction": "Row the opposite weight toward your lower ribs while keeping your elbow close to your torso.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 858,
-    "fields": {
-      "workout": 139,
-      "step_number": 5,
-      "instruction": "Lower the weight under control, then repeat the row on the opposite side without twisting your hips.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 859,
-    "fields": {
-      "workout": 139,
-      "step_number": 6,
-      "instruction": "Continue alternating sides for the desired number of repetitions.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.workout",
-    "pk": 140,
-    "fields": {
-      "name": "Reverse Lunge",
-      "difficulty": 1,
-      "description": "The reverse lunge is a compound unilateral lower-body exercise that primarily targets the quadriceps and gluteus maximus while also involving the hamstrings and improving balance. Stepping backward reduces the forward momentum of the movement and allows the working leg to control the descent and ascent. It is useful for developing single-leg strength and lower-body coordination.",
+      "description": "A home pulling exercise using a sturdy doorway to train the rear deltoids and upper back. Maintain a controlled body position and pull the elbows backward without yanking on the doorway.",
       "type": "compound",
       "strength_score": 7,
       "hypertrophy_score": 7,
-      "endurance_score": 9,
+      "endurance_score": 8,
       "equipment": [
-        5,
-        6,
-        7,
-        18,
-        13,
-        14,
-        19
+        11
       ],
       "sub_muscle": [
-        25,
-        33,
-        34
+        19,
+        31
       ]
     }
   },
   {
-    "model": "api.steps",
-    "pk": 860,
-    "fields": {
-      "workout": 140,
-      "step_number": 1,
-      "instruction": "Stand upright with your feet about hip-width apart and brace your core.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 861,
-    "fields": {
-      "workout": 140,
-      "step_number": 2,
-      "instruction": "Step one leg backward and place the ball of your foot on the floor.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 862,
-    "fields": {
-      "workout": 140,
-      "step_number": 3,
-      "instruction": "Bend both knees and lower your body until the front thigh is near parallel with the floor.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 863,
-    "fields": {
-      "workout": 140,
-      "step_number": 4,
-      "instruction": "Keep the front knee tracking in line with the foot while maintaining an upright torso.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 864,
-    "fields": {
-      "workout": 140,
-      "step_number": 5,
-      "instruction": "Push through the front foot to return to the starting position.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 865,
-    "fields": {
-      "workout": 140,
-      "step_number": 6,
-      "instruction": "Alternate legs or complete all repetitions on one side before switching.",
-      "image_url": ""
-    }
-  },
-  {
     "model": "api.workout",
-    "pk": 141,
+    "pk": 228,
     "fields": {
-      "name": "Curtsy Lunge",
+      "name": "Towel Face Pull",
       "difficulty": 1,
-      "description": "The curtsy lunge is a compound unilateral leg exercise that primarily targets the gluteus maximus while also training the quadriceps and adductors. The rear leg steps diagonally behind the body, creating a different loading angle for the hips and thighs. It is useful for developing lower-body strength, balance, and controlled single-leg movement.",
+      "description": "A towel-based upper-back exercise that mimics a face-pull pattern by pulling the towel toward the face while keeping the shoulders controlled. Use a secure setup and avoid sudden force.",
       "type": "compound",
-      "strength_score": 7,
-      "hypertrophy_score": 7,
+      "strength_score": 5,
+      "hypertrophy_score": 6,
       "endurance_score": 9,
       "equipment": [
-        5,
-        6,
-        7,
-        18,
-        13,
-        14,
-        19
+        12,
+        17
       ],
       "sub_muscle": [
-        25,
-        33,
-        35
+        19,
+        30,
+        31
       ]
     }
   },
   {
-    "model": "api.steps",
-    "pk": 866,
-    "fields": {
-      "workout": 141,
-      "step_number": 1,
-      "instruction": "Stand tall with your feet about hip-width apart and brace your core.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 867,
-    "fields": {
-      "workout": 141,
-      "step_number": 2,
-      "instruction": "Step one leg diagonally backward and behind the standing leg.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 868,
-    "fields": {
-      "workout": 141,
-      "step_number": 3,
-      "instruction": "Bend both knees and lower your hips while keeping most of your weight on the front leg.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 869,
-    "fields": {
-      "workout": 141,
-      "step_number": 4,
-      "instruction": "Keep the front knee aligned with the foot and avoid collapsing inward.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 870,
-    "fields": {
-      "workout": 141,
-      "step_number": 5,
-      "instruction": "Drive through the front foot and return to the starting position.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 871,
-    "fields": {
-      "workout": 141,
-      "step_number": 6,
-      "instruction": "Repeat on the opposite side for the desired number of repetitions.",
-      "image_url": ""
-    }
-  },
-  {
     "model": "api.workout",
-    "pk": 142,
+    "pk": 229,
     "fields": {
-      "name": "Sissy Squat",
-      "difficulty": 1,
-      "description": "The sissy squat is a bodyweight lower-body exercise that primarily targets the quadriceps through a deep knee-dominant movement. Keeping the hips extended while allowing the knees to travel forward increases the demand on the front of the thighs. A wall or sturdy support can be used for balance.",
+      "name": "Water Bottle Wrist Rotation",
+      "difficulty": 0,
+      "description": "A light forearm isolation exercise using a water bottle as resistance while rotating the wrist and forearm through a controlled range. It is useful for wrist control, forearm endurance, and grip support.",
       "type": "isolated",
+      "strength_score": 5,
+      "hypertrophy_score": 6,
+      "endurance_score": 10,
+      "equipment": [
+        13
+      ],
+      "sub_muscle": [
+        11,
+        12
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 230,
+    "fields": {
+      "name": "Bucket Upright Row",
+      "difficulty": 1,
+      "description": "A home resistance exercise using a securely held bucket to train the side deltoids and upper traps. Keep the load light enough to maintain controlled shoulder movement throughout the exercise.",
+      "type": "compound",
       "strength_score": 6,
       "hypertrophy_score": 7,
       "endurance_score": 8,
       "equipment": [
-        5,
-        10,
-        1,
-        3
+        14
+      ],
+      "sub_muscle": [
+        18,
+        30
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 231,
+    "fields": {
+      "name": "Backpack Front Raise",
+      "difficulty": 0,
+      "description": "A home shoulder exercise using a lightly loaded backpack to raise the arms in front of the body. It primarily trains the front deltoids and should be performed with controlled motion.",
+      "type": "isolated",
+      "strength_score": 5,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
+      "equipment": [
+        7
+      ],
+      "sub_muscle": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 232,
+    "fields": {
+      "name": "Chair Step-Back Lunge",
+      "difficulty": 1,
+      "description": "A supported reverse-lunge variation that uses a sturdy chair for balance. The movement primarily trains the quadriceps and gluteus maximus while allowing controlled unilateral leg work.",
+      "type": "compound",
+      "strength_score": 7,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
+      "equipment": [
+        1
+      ],
+      "sub_muscle": [
+        25,
+        33
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 233,
+    "fields": {
+      "name": "Doorway Incline Push-Up",
+      "difficulty": 0,
+      "description": "An easier pressing variation performed against a sturdy doorway. The reduced body angle lowers the resistance while training the chest and front deltoids.",
+      "type": "compound",
+      "strength_score": 4,
+      "hypertrophy_score": 4,
+      "endurance_score": 8,
+      "equipment": [
+        17
+      ],
+      "sub_muscle": [
+        3,
+        17
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 234,
+    "fields": {
+      "name": "Door-Assisted Sissy Squat",
+      "difficulty": 1,
+      "description": "A supported squat variation using a sturdy door frame for balance. Keeping the torso controlled and the knees moving forward places greater emphasis on the quadriceps.",
+      "type": "isolated",
+      "strength_score": 7,
+      "hypertrophy_score": 6,
+      "endurance_score": 9,
+      "equipment": [
+        17
       ],
       "sub_muscle": [
         33
@@ -450,397 +160,1442 @@
     }
   },
   {
-    "model": "api.steps",
-    "pk": 872,
-    "fields": {
-      "workout": 142,
-      "step_number": 1,
-      "instruction": "Stand upright with your feet about hip-width apart and lightly hold a sturdy support for balance if needed.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 873,
-    "fields": {
-      "workout": 142,
-      "step_number": 2,
-      "instruction": "Rise onto the balls of your feet and keep your torso upright.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 874,
-    "fields": {
-      "workout": 142,
-      "step_number": 3,
-      "instruction": "Brace your core and slowly bend your knees while allowing them to travel forward.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 875,
-    "fields": {
-      "workout": 142,
-      "step_number": 4,
-      "instruction": "Lower your body under control while keeping your hips extended and your torso relatively straight.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 876,
-    "fields": {
-      "workout": 142,
-      "step_number": 5,
-      "instruction": "Drive through the balls of your feet and contract your quadriceps to return to the starting position.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 877,
-    "fields": {
-      "workout": 142,
-      "step_number": 6,
-      "instruction": "Repeat with controlled tempo and only use a range of motion you can perform safely.",
-      "image_url": ""
-    }
-  },
-  {
     "model": "api.workout",
-    "pk": 143,
+    "pk": 235,
     "fields": {
-      "name": "Mountain Climbers",
+      "name": "Water Can Goblet Squat",
       "difficulty": 1,
-      "description": "Mountain climbers are a dynamic bodyweight exercise that combines a high-plank position with alternating knee drives. They primarily challenge the abdominal muscles and obliques while also demanding shoulder and hip stability. The continuous movement makes them useful for developing core endurance and full-body conditioning.",
+      "description": "A loaded squat using a water can held close to the chest. The front-loaded position encourages an upright torso while training the quadriceps, glutes, and adductors.",
       "type": "compound",
-      "strength_score": 6,
-      "hypertrophy_score": 4,
-      "endurance_score": 10,
-      "equipment": [
-        5
-      ],
-      "sub_muscle": [
-        20,
-        21,
-        24
-      ]
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 878,
-    "fields": {
-      "workout": 143,
-      "step_number": 1,
-      "instruction": "Start in a high-plank position with your hands beneath your shoulders and your body in a straight line.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 879,
-    "fields": {
-      "workout": 143,
-      "step_number": 2,
-      "instruction": "Brace your core and keep your hips level with the floor.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 880,
-    "fields": {
-      "workout": 143,
-      "step_number": 3,
-      "instruction": "Drive one knee toward your chest while keeping the opposite leg extended.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 881,
-    "fields": {
-      "workout": 143,
-      "step_number": 4,
-      "instruction": "Quickly return that foot while bringing the opposite knee toward your chest.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 882,
-    "fields": {
-      "workout": 143,
-      "step_number": 5,
-      "instruction": "Continue alternating your legs in a smooth, controlled rhythm.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 883,
-    "fields": {
-      "workout": 143,
-      "step_number": 6,
-      "instruction": "Maintain a stable upper body and consistent breathing throughout the set.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.workout",
-    "pk": 144,
-    "fields": {
-      "name": "Bear Crawl",
-      "difficulty": 1,
-      "description": "The bear crawl is a compound bodyweight movement performed on the hands and feet with the knees hovering above the floor. It primarily trains the transverse abdominis and obliques while demanding coordinated shoulder and hip stability. It is useful for developing core endurance, whole-body control, and movement coordination.",
-      "type": "compound",
-      "strength_score": 6,
-      "hypertrophy_score": 4,
-      "endurance_score": 10,
-      "equipment": [
-        5
-      ],
-      "sub_muscle": [
-        22,
-        23,
-        24
-      ]
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 884,
-    "fields": {
-      "workout": 144,
-      "step_number": 1,
-      "instruction": "Start on your hands and knees with your hands under your shoulders.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 885,
-    "fields": {
-      "workout": 144,
-      "step_number": 2,
-      "instruction": "Lift your knees a few centimeters off the floor while keeping your back flat.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 886,
-    "fields": {
-      "workout": 144,
-      "step_number": 3,
-      "instruction": "Move your right hand and left foot forward a short distance.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 887,
-    "fields": {
-      "workout": 144,
-      "step_number": 4,
-      "instruction": "Follow by moving your left hand and right foot forward while keeping your knees hovering.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 888,
-    "fields": {
-      "workout": 144,
-      "step_number": 5,
-      "instruction": "Continue crawling forward with controlled, opposite-limb movement.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 889,
-    "fields": {
-      "workout": 144,
-      "step_number": 6,
-      "instruction": "Keep your core braced and your hips as level as possible throughout the movement.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.workout",
-    "pk": 145,
-    "fields": {
-      "name": "Dumbbell Split Squat",
-      "difficulty": 1,
-      "description": "The dumbbell split squat is a unilateral lower-body exercise that primarily targets the quadriceps and gluteus maximus while also involving the hamstrings and adductors. Unlike the Bulgarian split squat, both feet remain on the floor, allowing a stable stance while each leg contributes independently. It is useful for developing leg strength, balance, and muscle mass.",
-      "type": "compound",
-      "strength_score": 8,
+      "strength_score": 7,
       "hypertrophy_score": 8,
       "endurance_score": 8,
       "equipment": [
-        6,
-        7,
-        18,
-        13,
-        14,
         19
       ],
       "sub_muscle": [
         25,
         33,
-        34,
         35
       ]
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 890,
-    "fields": {
-      "workout": 145,
-      "step_number": 1,
-      "instruction": "Stand in a staggered stance with one foot several steps in front of the other and hold the weights at your sides.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 891,
-    "fields": {
-      "workout": 145,
-      "step_number": 2,
-      "instruction": "Brace your core and keep most of your weight through the front leg.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 892,
-    "fields": {
-      "workout": 145,
-      "step_number": 3,
-      "instruction": "Bend both knees and lower your hips straight down under control.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 893,
-    "fields": {
-      "workout": 145,
-      "step_number": 4,
-      "instruction": "Keep your front foot planted and your torso upright or slightly inclined forward.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 894,
-    "fields": {
-      "workout": 145,
-      "step_number": 5,
-      "instruction": "Drive through the front foot to return to the starting position.",
-      "image_url": ""
-    }
-  },
-  {
-    "model": "api.steps",
-    "pk": 895,
-    "fields": {
-      "workout": 145,
-      "step_number": 6,
-      "instruction": "Complete the desired repetitions and switch sides.",
-      "image_url": ""
     }
   },
   {
     "model": "api.workout",
-    "pk": 146,
+    "pk": 236,
     "fields": {
-      "name": "Dumbbell Front Squat",
-      "difficulty": 1,
-      "description": "The dumbbell front squat is a compound lower-body exercise that primarily targets the quadriceps while also training the gluteus maximus and adductors. Holding the dumbbells in front of the body encourages an upright torso and creates a front-loaded squat pattern. It is useful for developing leg strength and muscle mass with accessible home equipment.",
+      "name": "Pillow Glute Bridge Squeeze",
+      "difficulty": 0,
+      "description": "A glute-bridge variation that uses a pillow between the knees to add an isometric adductor squeeze while the hips extend. It combines glute and inner-thigh work with controlled hip movement.",
       "type": "compound",
-      "strength_score": 8,
-      "hypertrophy_score": 8,
-      "endurance_score": 7,
+      "strength_score": 6,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
       "equipment": [
-        6,
-        7,
-        18,
-        13,
-        14,
-        19
+        15
       ],
       "sub_muscle": [
         25,
-        33,
         35
       ]
     }
   },
   {
-    "model": "api.steps",
-    "pk": 896,
+    "model": "api.workout",
+    "pk": 237,
     "fields": {
-      "workout": 146,
+      "name": "Towel Hamstring Isometric Curl",
+      "difficulty": 1,
+      "description": "An isometric hamstring exercise using a towel for resistance as the heels pull backward without allowing the legs to move. Maintain steady tension throughout the hold.",
+      "type": "isolated",
+      "strength_score": 6,
+      "hypertrophy_score": 6,
+      "endurance_score": 9,
+      "equipment": [
+        12
+      ],
+      "sub_muscle": [
+        34
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 238,
+    "fields": {
+      "name": "Side-Lying Clam",
+      "difficulty": 0,
+      "description": "A side-lying hip exercise that primarily trains the gluteus medius and minimus by rotating the top knee upward while keeping the pelvis stable.",
+      "type": "isolated",
+      "strength_score": 5,
+      "hypertrophy_score": 7,
+      "endurance_score": 10,
+      "equipment": [
+        5
+      ],
+      "sub_muscle": [
+        26
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 239,
+    "fields": {
+      "name": "Backpack Reverse Fly",
+      "difficulty": 1,
+      "description": "A bent-over rear-shoulder exercise using a light backpack as resistance. Raise the arms outward with controlled motion to emphasize the rear deltoids and upper back.",
+      "type": "isolated",
+      "strength_score": 6,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
+      "equipment": [
+        7
+      ],
+      "sub_muscle": [
+        19,
+        31
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 240,
+    "fields": {
+      "name": "Water Bottle Y Raise",
+      "difficulty": 0,
+      "description": "A lightweight Y-raise variation using water bottles to train the front and lower portions of the shoulder complex with emphasis on controlled upward movement.",
+      "type": "isolated",
+      "strength_score": 5,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
+      "equipment": [
+        13
+      ],
+      "sub_muscle": [
+        17,
+        32
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 241,
+    "fields": {
+      "name": "Backpack Seated Good Morning",
+      "difficulty": 1,
+      "description": "A seated hip-hinge exercise using a backpack as resistance. The movement trains the hamstrings and lower back while the seated position limits knee movement and emphasizes the hinge.",
+      "type": "compound",
+      "strength_score": 7,
+      "hypertrophy_score": 8,
+      "endurance_score": 7,
+      "equipment": [
+        7,
+        1
+      ],
+      "sub_muscle": [
+        16,
+        34
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 242,
+    "fields": {
+      "name": "Towel Overhead Triceps Extension",
+      "difficulty": 0,
+      "description": "A light triceps exercise using a towel to provide controlled self-resistance during overhead elbow extension. Keep the upper arms stable and move primarily through the elbows.",
+      "type": "isolated",
+      "strength_score": 4,
+      "hypertrophy_score": 6,
+      "endurance_score": 9,
+      "equipment": [
+        12
+      ],
+      "sub_muscle": [
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 243,
+    "fields": {
+      "name": "Water Bottle Concentration Curl",
+      "difficulty": 0,
+      "description": "A single-arm biceps curl performed with a water bottle while the upper arm is supported against the inner thigh. The stable position reduces momentum and keeps tension on the biceps.",
+      "type": "isolated",
+      "strength_score": 5,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
+      "equipment": [
+        13
+      ],
+      "sub_muscle": [
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 244,
+    "fields": {
+      "name": "Bucket Front Raise",
+      "difficulty": 0,
+      "description": "A front-shoulder exercise using a light bucket as resistance. Raise the bucket in front of the body with controlled speed and avoid swinging.",
+      "type": "isolated",
+      "strength_score": 5,
+      "hypertrophy_score": 7,
+      "endurance_score": 9,
+      "equipment": [
+        14
+      ],
+      "sub_muscle": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 245,
+    "fields": {
+      "name": "Wall Calf Isometric Hold",
+      "difficulty": 0,
+      "description": "An isometric calf exercise performed while pressing through the balls of the feet with a wall available for balance. Holding the raised-heel position challenges calf endurance.",
+      "type": "isolated",
+      "strength_score": 5,
+      "hypertrophy_score": 6,
+      "endurance_score": 10,
+      "equipment": [
+        10,
+        5
+      ],
+      "sub_muscle": [
+        37
+      ]
+    }
+  },
+  {
+    "model": "api.workout",
+    "pk": 246,
+    "fields": {
+      "name": "Neck Isometric Flexion Hold",
+      "difficulty": 0,
+      "description": "A gentle isometric neck exercise in which the head presses forward into the hand without visible neck movement. Use light pressure and maintain a comfortable neutral position.",
+      "type": "isolated",
+      "strength_score": 5,
+      "hypertrophy_score": 5,
+      "endurance_score": 8,
+      "equipment": [
+        5
+      ],
+      "sub_muscle": [
+        28
+      ]
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1382,
+    "fields": {
+      "workout": 227,
       "step_number": 1,
-      "instruction": "Stand with your feet about shoulder-width apart and hold the weights near the front of your shoulders.",
+      "instruction": "Stand facing a sturdy doorway and position your body so you can perform a controlled pulling motion.",
       "image_url": ""
     }
   },
   {
     "model": "api.steps",
-    "pk": 897,
+    "pk": 1383,
     "fields": {
-      "workout": 146,
+      "workout": 227,
       "step_number": 2,
-      "instruction": "Brace your core and keep your chest lifted while maintaining a stable stance.",
+      "instruction": "Place your hands at a comfortable height and keep your chest lifted.",
       "image_url": ""
     }
   },
   {
     "model": "api.steps",
-    "pk": 898,
+    "pk": 1384,
     "fields": {
-      "workout": 146,
+      "workout": 227,
       "step_number": 3,
-      "instruction": "Bend your knees and hips together to lower into a squat.",
+      "instruction": "Brace your core and set your shoulders down and back.",
       "image_url": ""
     }
   },
   {
     "model": "api.steps",
-    "pk": 899,
+    "pk": 1385,
     "fields": {
-      "workout": 146,
+      "workout": 227,
       "step_number": 4,
-      "instruction": "Keep your knees tracking over your feet and maintain an upright torso as you descend.",
+      "instruction": "Pull your elbows backward while bringing your upper body toward the doorway under control.",
       "image_url": ""
     }
   },
   {
     "model": "api.steps",
-    "pk": 900,
+    "pk": 1386,
     "fields": {
-      "workout": 146,
+      "workout": 227,
       "step_number": 5,
-      "instruction": "Drive through your feet and extend your hips and knees to stand back up.",
+      "instruction": "Squeeze the rear delts and upper back briefly at the end of the pull.",
       "image_url": ""
     }
   },
   {
     "model": "api.steps",
-    "pk": 901,
+    "pk": 1387,
     "fields": {
-      "workout": 146,
+      "workout": 227,
       "step_number": 6,
-      "instruction": "Repeat for the desired number of repetitions with controlled depth and tempo.",
+      "instruction": "Slowly return to the starting position and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1388,
+    "fields": {
+      "workout": 228,
+      "step_number": 1,
+      "instruction": "Hold a towel securely with both hands and position it at about face height.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1389,
+    "fields": {
+      "workout": 228,
+      "step_number": 2,
+      "instruction": "Keep your elbows slightly below shoulder level and your chest upright.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1390,
+    "fields": {
+      "workout": 228,
+      "step_number": 3,
+      "instruction": "Create light tension through the towel without jerking or pulling aggressively.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1391,
+    "fields": {
+      "workout": 228,
+      "step_number": 4,
+      "instruction": "Pull your hands toward the sides of your face while drawing your elbows backward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1392,
+    "fields": {
+      "workout": 228,
+      "step_number": 5,
+      "instruction": "Squeeze the rear delts and upper back briefly.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1393,
+    "fields": {
+      "workout": 228,
+      "step_number": 6,
+      "instruction": "Return your hands forward under control and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1394,
+    "fields": {
+      "workout": 229,
+      "step_number": 1,
+      "instruction": "Hold a partially filled water bottle securely in one hand.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1395,
+    "fields": {
+      "workout": 229,
+      "step_number": 2,
+      "instruction": "Support your forearm on your thigh or another stable surface.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1396,
+    "fields": {
+      "workout": 229,
+      "step_number": 3,
+      "instruction": "Keep your upper arm and elbow still throughout the movement.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1397,
+    "fields": {
+      "workout": 229,
+      "step_number": 4,
+      "instruction": "Slowly rotate your forearm and wrist through a comfortable range.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1398,
+    "fields": {
+      "workout": 229,
+      "step_number": 5,
+      "instruction": "Pause briefly at each end of the rotation.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1399,
+    "fields": {
+      "workout": 229,
+      "step_number": 6,
+      "instruction": "Return to the starting position and repeat before changing sides.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1400,
+    "fields": {
+      "workout": 230,
+      "step_number": 1,
+      "instruction": "Hold a light bucket securely with both hands in front of your thighs.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1401,
+    "fields": {
+      "workout": 230,
+      "step_number": 2,
+      "instruction": "Stand upright with your feet about shoulder-width apart.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1402,
+    "fields": {
+      "workout": 230,
+      "step_number": 3,
+      "instruction": "Brace your core and keep your shoulders relaxed.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1403,
+    "fields": {
+      "workout": 230,
+      "step_number": 4,
+      "instruction": "Pull the bucket upward by leading with your elbows while keeping the load close to your body.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1404,
+    "fields": {
+      "workout": 230,
+      "step_number": 5,
+      "instruction": "Stop around upper-chest height or earlier if your shoulders become uncomfortable.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1405,
+    "fields": {
+      "workout": 230,
+      "step_number": 6,
+      "instruction": "Lower the bucket slowly and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1406,
+    "fields": {
+      "workout": 231,
+      "step_number": 1,
+      "instruction": "Stand upright with a lightly loaded backpack held by the top handle or straps.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1407,
+    "fields": {
+      "workout": 231,
+      "step_number": 2,
+      "instruction": "Keep your feet stable and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1408,
+    "fields": {
+      "workout": 231,
+      "step_number": 3,
+      "instruction": "Start with the backpack in front of your thighs.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1409,
+    "fields": {
+      "workout": 231,
+      "step_number": 4,
+      "instruction": "Raise it forward with slightly bent elbows until the arms are around shoulder height.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1410,
+    "fields": {
+      "workout": 231,
+      "step_number": 5,
+      "instruction": "Pause briefly while keeping the torso still.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1411,
+    "fields": {
+      "workout": 231,
+      "step_number": 6,
+      "instruction": "Lower the backpack slowly and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1412,
+    "fields": {
+      "workout": 232,
+      "step_number": 1,
+      "instruction": "Stand beside a sturdy chair and hold it lightly for balance.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1413,
+    "fields": {
+      "workout": 232,
+      "step_number": 2,
+      "instruction": "Step one leg backward while keeping the front foot planted.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1414,
+    "fields": {
+      "workout": 232,
+      "step_number": 3,
+      "instruction": "Lower into the lunge by bending both knees under control.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1415,
+    "fields": {
+      "workout": 232,
+      "step_number": 4,
+      "instruction": "Push through the front foot to return to standing.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1416,
+    "fields": {
+      "workout": 232,
+      "step_number": 5,
+      "instruction": "Keep the torso upright and the knee aligned with the foot.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1417,
+    "fields": {
+      "workout": 232,
+      "step_number": 6,
+      "instruction": "Repeat on the other side.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1418,
+    "fields": {
+      "workout": 233,
+      "step_number": 1,
+      "instruction": "Stand facing a sturdy doorway with your hands placed around chest height.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1419,
+    "fields": {
+      "workout": 233,
+      "step_number": 2,
+      "instruction": "Walk your feet backward until your body forms a straight incline.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1420,
+    "fields": {
+      "workout": 233,
+      "step_number": 3,
+      "instruction": "Brace your core and keep your shoulders stable.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1421,
+    "fields": {
+      "workout": 233,
+      "step_number": 4,
+      "instruction": "Bend your elbows to bring your chest toward the doorway.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1422,
+    "fields": {
+      "workout": 233,
+      "step_number": 5,
+      "instruction": "Push through your hands to return to the starting position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1423,
+    "fields": {
+      "workout": 233,
+      "step_number": 6,
+      "instruction": "Repeat with controlled repetitions.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1424,
+    "fields": {
+      "workout": 234,
+      "step_number": 1,
+      "instruction": "Stand facing a sturdy door frame and hold it for balance.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1425,
+    "fields": {
+      "workout": 234,
+      "step_number": 2,
+      "instruction": "Rise onto the balls of your feet and keep the body tall.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1426,
+    "fields": {
+      "workout": 234,
+      "step_number": 3,
+      "instruction": "Bend your knees forward while allowing your heels to stay elevated.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1427,
+    "fields": {
+      "workout": 234,
+      "step_number": 4,
+      "instruction": "Lower only as far as you can control without losing balance.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1428,
+    "fields": {
+      "workout": 234,
+      "step_number": 5,
+      "instruction": "Drive through the balls of your feet to return to the upright position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1429,
+    "fields": {
+      "workout": 234,
+      "step_number": 6,
+      "instruction": "Repeat smoothly while maintaining a controlled torso.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1430,
+    "fields": {
+      "workout": 235,
+      "step_number": 1,
+      "instruction": "Hold a filled water can close to your chest with both hands.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1431,
+    "fields": {
+      "workout": 235,
+      "step_number": 2,
+      "instruction": "Stand with your feet about shoulder-width apart and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1432,
+    "fields": {
+      "workout": 235,
+      "step_number": 3,
+      "instruction": "Sit your hips back and bend your knees to descend into the squat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1433,
+    "fields": {
+      "workout": 235,
+      "step_number": 4,
+      "instruction": "Keep your chest lifted and knees tracking in line with your feet.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1434,
+    "fields": {
+      "workout": 235,
+      "step_number": 5,
+      "instruction": "Drive through your feet to return to standing.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1435,
+    "fields": {
+      "workout": 235,
+      "step_number": 6,
+      "instruction": "Repeat for controlled repetitions.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1436,
+    "fields": {
+      "workout": 236,
+      "step_number": 1,
+      "instruction": "Lie on your back with your knees bent and place a pillow between them.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1437,
+    "fields": {
+      "workout": 236,
+      "step_number": 2,
+      "instruction": "Keep your feet flat and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1438,
+    "fields": {
+      "workout": 236,
+      "step_number": 3,
+      "instruction": "Gently squeeze the pillow with your knees while keeping your pelvis neutral.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1439,
+    "fields": {
+      "workout": 236,
+      "step_number": 4,
+      "instruction": "Drive through your feet and lift your hips toward the ceiling.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1440,
+    "fields": {
+      "workout": 236,
+      "step_number": 5,
+      "instruction": "Pause while squeezing the glutes and maintaining the pillow squeeze.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1441,
+    "fields": {
+      "workout": 236,
+      "step_number": 6,
+      "instruction": "Lower your hips slowly and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1442,
+    "fields": {
+      "workout": 237,
+      "step_number": 1,
+      "instruction": "Lie on your back with your knees bent and place a folded towel under or around your heels as appropriate for the setup.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1443,
+    "fields": {
+      "workout": 237,
+      "step_number": 2,
+      "instruction": "Brace your core and keep your hips down.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1444,
+    "fields": {
+      "workout": 237,
+      "step_number": 3,
+      "instruction": "Pull your heels backward against the towel while resisting movement.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1445,
+    "fields": {
+      "workout": 237,
+      "step_number": 4,
+      "instruction": "Create strong but controlled hamstring tension without cramping.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1446,
+    "fields": {
+      "workout": 237,
+      "step_number": 5,
+      "instruction": "Hold the contraction steadily for the desired duration.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1447,
+    "fields": {
+      "workout": 237,
+      "step_number": 6,
+      "instruction": "Relax slowly and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1448,
+    "fields": {
+      "workout": 238,
+      "step_number": 1,
+      "instruction": "Lie on your side with your knees bent and your hips stacked.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1449,
+    "fields": {
+      "workout": 238,
+      "step_number": 2,
+      "instruction": "Keep your feet together and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1450,
+    "fields": {
+      "workout": 238,
+      "step_number": 3,
+      "instruction": "Lift the top knee while keeping the feet together and pelvis stable.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1451,
+    "fields": {
+      "workout": 238,
+      "step_number": 4,
+      "instruction": "Raise only as far as you can without rolling the torso backward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1452,
+    "fields": {
+      "workout": 238,
+      "step_number": 5,
+      "instruction": "Pause briefly while squeezing the outer hip.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1453,
+    "fields": {
+      "workout": 238,
+      "step_number": 6,
+      "instruction": "Lower the knee under control and repeat before switching sides.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1454,
+    "fields": {
+      "workout": 239,
+      "step_number": 1,
+      "instruction": "Hold a lightly loaded backpack with both hands while bending slightly at the hips.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1455,
+    "fields": {
+      "workout": 239,
+      "step_number": 2,
+      "instruction": "Keep your back neutral and arms hanging naturally.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1456,
+    "fields": {
+      "workout": 239,
+      "step_number": 3,
+      "instruction": "Brace your core and draw your shoulder blades gently together.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1457,
+    "fields": {
+      "workout": 239,
+      "step_number": 4,
+      "instruction": "Raise the backpack outward by moving the arms away from the body.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1458,
+    "fields": {
+      "workout": 239,
+      "step_number": 5,
+      "instruction": "Pause briefly while squeezing the rear shoulders and upper back.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1459,
+    "fields": {
+      "workout": 239,
+      "step_number": 6,
+      "instruction": "Lower the backpack slowly and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1460,
+    "fields": {
+      "workout": 240,
+      "step_number": 1,
+      "instruction": "Hold a light water bottle in each hand with your arms hanging naturally.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1461,
+    "fields": {
+      "workout": 240,
+      "step_number": 2,
+      "instruction": "Bend slightly at the hips and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1462,
+    "fields": {
+      "workout": 240,
+      "step_number": 3,
+      "instruction": "Raise both arms diagonally upward into a Y shape.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1463,
+    "fields": {
+      "workout": 240,
+      "step_number": 4,
+      "instruction": "Keep the movement controlled and avoid shrugging excessively.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1464,
+    "fields": {
+      "workout": 240,
+      "step_number": 5,
+      "instruction": "Pause briefly near the top while maintaining shoulder control.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1465,
+    "fields": {
+      "workout": 240,
+      "step_number": 6,
+      "instruction": "Lower the bottles slowly and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1466,
+    "fields": {
+      "workout": 241,
+      "step_number": 1,
+      "instruction": "Sit upright near the edge of a sturdy chair with a backpack held securely against your upper body.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1467,
+    "fields": {
+      "workout": 241,
+      "step_number": 2,
+      "instruction": "Place your feet firmly on the floor and brace your core.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1468,
+    "fields": {
+      "workout": 241,
+      "step_number": 3,
+      "instruction": "Hinge forward from the hips while keeping your spine neutral.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1469,
+    "fields": {
+      "workout": 241,
+      "step_number": 4,
+      "instruction": "Lower your torso only as far as you can maintain control.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1470,
+    "fields": {
+      "workout": 241,
+      "step_number": 5,
+      "instruction": "Drive your hips forward to return to an upright seated position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1471,
+    "fields": {
+      "workout": 241,
+      "step_number": 6,
+      "instruction": "Repeat with a slow, controlled tempo.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1472,
+    "fields": {
+      "workout": 242,
+      "step_number": 1,
+      "instruction": "Hold a towel between your hands above or behind your head.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1473,
+    "fields": {
+      "workout": 242,
+      "step_number": 2,
+      "instruction": "Keep your upper arms close to your head and your elbows pointing upward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1474,
+    "fields": {
+      "workout": 242,
+      "step_number": 3,
+      "instruction": "Create light tension through the towel with one hand while the other arm performs the movement.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1475,
+    "fields": {
+      "workout": 242,
+      "step_number": 4,
+      "instruction": "Extend the working elbow until the arm is nearly straight.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1476,
+    "fields": {
+      "workout": 242,
+      "step_number": 5,
+      "instruction": "Pause briefly while keeping the upper arm still.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1477,
+    "fields": {
+      "workout": 242,
+      "step_number": 6,
+      "instruction": "Return slowly to the starting position and repeat on the other side.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1478,
+    "fields": {
+      "workout": 243,
+      "step_number": 1,
+      "instruction": "Sit down and place the working upper arm against the inner thigh.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1479,
+    "fields": {
+      "workout": 243,
+      "step_number": 2,
+      "instruction": "Hold a filled water bottle with your palm facing upward.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1480,
+    "fields": {
+      "workout": 243,
+      "step_number": 3,
+      "instruction": "Keep the upper arm fixed and brace your torso.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1481,
+    "fields": {
+      "workout": 243,
+      "step_number": 4,
+      "instruction": "Curl the bottle toward your shoulder by bending the elbow.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1482,
+    "fields": {
+      "workout": 243,
+      "step_number": 5,
+      "instruction": "Squeeze the biceps briefly at the top.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1483,
+    "fields": {
+      "workout": 243,
+      "step_number": 6,
+      "instruction": "Lower the bottle slowly and repeat before switching sides.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1484,
+    "fields": {
+      "workout": 244,
+      "step_number": 1,
+      "instruction": "Stand upright holding a light bucket by its handle or sides.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1485,
+    "fields": {
+      "workout": 244,
+      "step_number": 2,
+      "instruction": "Brace your core and keep your shoulders relaxed.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1486,
+    "fields": {
+      "workout": 244,
+      "step_number": 3,
+      "instruction": "Raise the bucket forward with slightly bent elbows.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1487,
+    "fields": {
+      "workout": 244,
+      "step_number": 4,
+      "instruction": "Lift only to a comfortable shoulder-height range.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1488,
+    "fields": {
+      "workout": 244,
+      "step_number": 5,
+      "instruction": "Pause briefly without leaning backward or swinging.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1489,
+    "fields": {
+      "workout": 244,
+      "step_number": 6,
+      "instruction": "Lower the bucket slowly and repeat.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1490,
+    "fields": {
+      "workout": 245,
+      "step_number": 1,
+      "instruction": "Stand facing a wall and use it lightly for balance.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1491,
+    "fields": {
+      "workout": 245,
+      "step_number": 2,
+      "instruction": "Rise onto the balls of your feet and lift your heels as high as comfortable.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1492,
+    "fields": {
+      "workout": 245,
+      "step_number": 3,
+      "instruction": "Keep your body tall and maintain steady pressure through both feet.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1493,
+    "fields": {
+      "workout": 245,
+      "step_number": 4,
+      "instruction": "Hold the top position without bouncing.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1494,
+    "fields": {
+      "workout": 245,
+      "step_number": 5,
+      "instruction": "Continue breathing normally while keeping the calves under tension.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1495,
+    "fields": {
+      "workout": 245,
+      "step_number": 6,
+      "instruction": "Lower your heels slowly and repeat or rest.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1496,
+    "fields": {
+      "workout": 246,
+      "step_number": 1,
+      "instruction": "Sit or stand upright with your head in a neutral position.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1497,
+    "fields": {
+      "workout": 246,
+      "step_number": 2,
+      "instruction": "Place one hand lightly against your forehead.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1498,
+    "fields": {
+      "workout": 246,
+      "step_number": 3,
+      "instruction": "Gently press your head forward into your hand without allowing visible movement.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1499,
+    "fields": {
+      "workout": 246,
+      "step_number": 4,
+      "instruction": "Keep the neck muscles engaged while maintaining relaxed shoulders.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1500,
+    "fields": {
+      "workout": 246,
+      "step_number": 5,
+      "instruction": "Hold the contraction for the desired duration with light, controlled pressure.",
+      "image_url": ""
+    }
+  },
+  {
+    "model": "api.steps",
+    "pk": 1501,
+    "fields": {
+      "workout": 246,
+      "step_number": 6,
+      "instruction": "Release slowly and repeat without forcing the neck.",
       "image_url": ""
     }
   }
