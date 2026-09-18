@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
 # Create your views here.
 from django.views import generic
+from django.db.models import Count
 from .models import Equipment, MuscleGroup, Workout, SubMuscle, Profile
 from django.contrib.auth.models import User
 from django.contrib.auth import login as auth_login, logout as auth_logout, authenticate
@@ -11,24 +12,25 @@ from rest_framework import generics
 
 class Home(generic.ListView): 
     model = MuscleGroup
-    queryset = MuscleGroup.objects.prefetch_related()
+    queryset = MuscleGroup.objects.annotate(workout_count = Count("muscles__workouts", distinct=True))
     def get_template_names(self):
         return "api/home.html"
     def get_context_object_name(self, object_list):
         return "muscles"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         ids = self.request.session.get("equipment_ids", [])
         if self.request.user.is_authenticated:
             ids = Profile.objects.get(user = self.request.user).equipment_ids
+
+        workouts = Workout.objects.prefetch_related("equipment", "sub_muscle")
         if ids == []:
-            workouts = Workout.objects.all()
             context["text"] = "Add equipments"
         else:
-            workouts = Workout.objects.filter(equipment__id__in = ids).distinct()
+            workouts = workouts.filter(equipment__id__in = ids).distinct()
             context["text"] = "Change equipments"
-        context["workouts"] = workouts
-        context["ids"] = workouts.values_list("id", flat=True)
+        context["w_count"] = len(workouts)
         return context
     
 @csrf_protect

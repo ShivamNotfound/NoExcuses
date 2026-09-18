@@ -3,9 +3,9 @@ from api.models import Workout, MuscleGroup, SubMuscle
 register = template.Library()
 
 @register.simple_tag
-def get_workout_counts(muscle, ids):
-    submuscles = list(SubMuscle.objects.filter(muscle = muscle))
-    return len(Workout.objects.filter(sub_muscle__in = submuscles, id__in = ids).distinct()) 
+def get_workout_counts(muscle, workouts, submuscles):
+    submuscles = list(submuscles.filter(muscle = muscle))
+    return len(workouts.filter(sub_muscle__in = submuscles).distinct()) 
 
 @register.simple_tag
 def get_workout_counts_submuscle(ids, submuscle):
