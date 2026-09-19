@@ -18,6 +18,7 @@ class Home(generic.ListView):
     def get_context_object_name(self, object_list):
         return "muscles"
     def get_context_data(self, **kwargs):
+
         context = super().get_context_data(**kwargs)
 
         ids = self.request.session.get("equipment_ids", [])
@@ -35,22 +36,28 @@ class Home(generic.ListView):
     
 @csrf_protect
 def equipment_selection(request):
-    equipments = Equipment.objects.prefetch_related()
-    workouts = Workout.objects.all()
+    equipments = Equipment.objects.prefetch_related("workouts")
+    workouts = Workout.objects.prefetch_related("sub_muscle", "equipment")
+
+    equip_submuscle = workouts.values_list("equipment__id", "sub_muscle__id")
+
     equipment_data = {}
-    for e in equipments:
-        works = e.workouts.values_list('id', flat=True)
-        res = []
-        for w in works:
-            res.extend(workouts.get(id = w).sub_muscle.values_list('id', flat=True))
-        equipment_data[e.id] = list(set(res))
+    for pair in equip_submuscle:
+        equip = pair[0]
+        submuscle = pair[1]
+        if(equip in equipment_data):
+            equipment_data.get(equip).append(submuscle)
+        else:
+            equipment_data[equip] = [submuscle]
+
     if request.user.is_authenticated:
         user_equipments = list(Profile.objects.get(user = request.user).equipment_ids)
     else:
         user_equipments = request.session.get('equipment_ids', [])
     user_equipments = list(map(int, user_equipments))
+
     if request.method == 'POST':
-        ids = list(request.POST.keys())[1:] # Remove blurbar and fix this.
+        ids = list(request.POST.keys())[1:]
         if request.user.is_authenticated:
             pf = Profile.objects.get(user = request.user)
             pf.equipment_ids = ids
@@ -58,6 +65,7 @@ def equipment_selection(request):
         else:
             request.session['equipment_ids'] = ids
         return redirect("home")
+    
     context = {"equipments": equipments,'sub_data':equipment_data, 'user_equipments':user_equipments}        
     return render(request, 'api/select_equipment.html', context)
 
