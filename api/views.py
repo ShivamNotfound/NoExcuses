@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
 # Create your views here.
 from django.views import generic
-from django.db.models import Count
+from django.db.models import Count, Q
 from .models import Equipment, MuscleGroup, Workout, SubMuscle, Profile
 from django.contrib.auth.models import User
 from django.contrib.auth import login as auth_login, logout as auth_logout, authenticate
@@ -75,19 +75,25 @@ def available_workouts_for_submuscle(request, muscle_id, current = 0):
     if request.user.is_authenticated:
         ids = Profile.objects.get(user = request.user).equipment_ids
     if(ids == []):
-        ids = Workout.objects.all().values_list("id", flat = True)
-    submuscles = SubMuscle.objects.filter(muscle__id = muscle_id)
+        ids = Equipment.objects.all().values_list("id", flat = True)
+
+    workouts = Workout.objects.prefetch_related("equipment")
     if current!=0:
         submuscle = SubMuscle.objects.get(id = current)
         active = submuscle.id
-        workouts = Workout.objects.filter(equipment__id__in = ids, sub_muscle = submuscle).distinct()
+        workouts = workouts.filter(equipment__id__in = ids, sub_muscle = submuscle).distinct().order_by("-hypertrophy_score")
     else:
-        workouts = Workout.objects.filter(equipment__id__in = ids, sub_muscle = submuscles[0]).distinct()
-        active = submuscles[0].id
-    ids = Workout.objects.filter(equipment__id__in = ids).values_list("id", flat = True)
-    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts.order_by("-hypertrophy_score"), "active":active, "current":current}
+        s = SubMuscle.objects.filter(muscle__id = muscle_id).first()
+        workouts = workouts.filter(equipment__id__in = ids, sub_muscle = s).distinct().order_by("-hypertrophy_score")
+        active = s.id
+
+    submuscles = SubMuscle.objects.filter(muscle_id = muscle_id).annotate(submuscles_count = Count("workouts", distinct=True, filter = Q(workouts__equipment__id__in = ids)))
+    context = {"ids":ids, "muscle_id":muscle_id, "submuscles":submuscles, "workouts_selected":workouts, "active":active, "current":current}
+
+
     context["select"] = 0
     context["diff"] = 0
+
     if request.method == 'POST':
         options = ["-hypertrophy_score", "-strength_score", "-endurance_score"]
         option = request.POST.get("option")

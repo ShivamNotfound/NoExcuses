@@ -7,7 +7,7 @@
             {% for submuscle in submuscles %}
             <div id ="{% if submuscle.id == active %}active{% else %} {% endif %}" onclick="window.location.href=`{% url 'available_workouts_submuscle' muscle_id submuscle.id %}`" class="submuscle_card">
             <div class="submuscle_count">
-                {% get_workout_counts_submuscle ids submuscle %}
+                {{submuscle.submuscles_count}}
             </div>
             <div class="submuscle_name">{{submuscle}}</div>
             </div>

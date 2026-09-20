@@ -4,6 +4,7 @@ register = template.Library()
 
 @register.simple_tag
 def get_workout_counts(muscle, workouts, submuscles):
+
     submuscles = list(submuscles.filter(muscle = muscle))
     return len(workouts.filter(sub_muscle__in = submuscles).distinct()) 
 
