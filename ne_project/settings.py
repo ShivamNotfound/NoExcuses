@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'api.apps.ApiConfig',
     'rest_framework',
-    'silk',
+    #'silk',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'silk.middleware.SilkyMiddleware',
+    #'silk.middleware.SilkyMiddleware',
 ]
 
 ROOT_URLCONF = 'ne_project.urls'
