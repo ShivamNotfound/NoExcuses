@@ -23,5 +23,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(api_urls)),
-    path('silk/', include("silk.urls", namespace='silk'))
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+if settings.ENVIRONMENT == "development":
+    urlpatterns += path('silk/', include("silk.urls", namespace='silk'))

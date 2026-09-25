@@ -52,8 +52,9 @@ INSTALLED_APPS = [
     'cloudinary',
     'api.apps.ApiConfig',
     'rest_framework',
-    #'silk',
 ]
+if ENVIRONMENT == 'development':
+    INSTALLED_APPS += 'silk'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -66,6 +67,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     #'silk.middleware.SilkyMiddleware',
 ]
+if ENVIRONMENT == "development":
+    MIDDLEWARE += 'silk.middleware.SilkyMiddleware'
 
 ROOT_URLCONF = 'ne_project.urls'
 
