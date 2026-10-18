@@ -41,25 +41,29 @@ class Home(generic.ListView):
     
 @csrf_protect
 def equipment_selection(request):
-    logger.warning(
-        "DB diagnostic: engine=%s host=%s database=%s",
-        connection.settings_dict["ENGINE"],
-        connection.settings_dict["HOST"],
-        connection.settings_dict["NAME"],
-    )
+
+    logger = logging.getLogger(__name__)
+
     equipments = Equipment.objects.prefetch_related("workouts")
     workouts = Workout.objects.prefetch_related("sub_muscle", "equipment")
+
+    logger.warning("EQUIPMENT: querysets constructed")
 
     equip_submuscle = workouts.values_list("equipment__id", "sub_muscle__id")
 
     equipment_data = {}
-    for pair in equip_submuscle:
-        equip = pair[0]
-        submuscle = pair[1]
-        if(equip in equipment_data):
-            equipment_data.get(equip).append(submuscle)
-        else:
-            equipment_data[equip] = [submuscle]
+    try:
+        for pair in equip_submuscle:
+            equip = pair[0]
+            submuscle = pair[1]
+            if(equip in equipment_data):
+                equipment_data.get(equip).append(submuscle)
+            else:
+                equipment_data[equip] = [submuscle]
+    except Exception:
+        logger.exception("EQUIPMENT: query evaluation failed")
+        raise
+    logger.warning("EQUIPMENT: query evaluation succeeded")
 
     if request.user.is_authenticated:
         user_equipments = list(Profile.objects.get(user = request.user).equipment_ids)
