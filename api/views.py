@@ -10,6 +10,11 @@ from django.contrib.auth import login as auth_login, logout as auth_logout, auth
 from .serializers import WorkoutSerializer, StepsSerializer
 from rest_framework import generics
 
+import logging
+from django.db import connection
+
+logger = logging.getLogger(__name__)
+
 class Home(generic.ListView): 
     model = MuscleGroup
     queryset = MuscleGroup.objects.annotate(workout_count = Count("muscles__workouts", distinct=True))
@@ -36,6 +41,12 @@ class Home(generic.ListView):
     
 @csrf_protect
 def equipment_selection(request):
+    logger.warning(
+        "DB diagnostic: engine=%s host=%s database=%s",
+        connection.settings_dict["ENGINE"],
+        connection.settings_dict["HOST"],
+        connection.settings_dict["NAME"],
+    )
     equipments = Equipment.objects.prefetch_related("workouts")
     workouts = Workout.objects.prefetch_related("sub_muscle", "equipment")
 

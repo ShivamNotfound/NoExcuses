@@ -57,6 +57,7 @@ if ENVIRONMENT == 'development':
     INSTALLED_APPS += ['silk']
 
 MIDDLEWARE = [
+    "api.middleware.ExceptionLoggingMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -91,7 +92,7 @@ WSGI_APPLICATION = 'ne_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-if ENVIRONMENT == 'development':
+if ENVIRONMENT == 'development' and False:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
