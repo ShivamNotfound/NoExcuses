@@ -88,11 +88,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ne_project.wsgi.application'
 
+from urllib.parse import urlparse
 
+database_url = env("DATABASE_URL")
+parsed = urlparse(database_url)
+
+print("DB URL scheme:", parsed.scheme)
+print("DB URL host:", parsed.hostname)
+print("DB URL database:", parsed.path.lstrip("/"))
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-if ENVIRONMENT == 'development' and False:
+if ENVIRONMENT == 'development':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
