@@ -57,7 +57,6 @@ if ENVIRONMENT == 'development':
     INSTALLED_APPS += ['silk']
 
 MIDDLEWARE = [
-    "api.middleware.ExceptionLoggingMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -88,14 +87,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ne_project.wsgi.application'
 
-from urllib.parse import urlparse
-
-database_url = env("DATABASE_URL")
-parsed = urlparse(database_url)
-
-print("DB URL scheme:", parsed.scheme)
-print("DB URL host:", parsed.hostname)
-print("DB URL database:", parsed.path.lstrip("/"))
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 

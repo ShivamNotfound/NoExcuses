@@ -10,11 +10,6 @@ from django.contrib.auth import login as auth_login, logout as auth_logout, auth
 from .serializers import WorkoutSerializer, StepsSerializer
 from rest_framework import generics
 
-import logging
-from django.db import connection
-
-logger = logging.getLogger(__name__)
-
 class Home(generic.ListView): 
     model = MuscleGroup
     queryset = MuscleGroup.objects.annotate(workout_count = Count("muscles__workouts", distinct=True))
@@ -42,28 +37,21 @@ class Home(generic.ListView):
 @csrf_protect
 def equipment_selection(request):
 
-    logger = logging.getLogger(__name__)
 
     equipments = Equipment.objects.prefetch_related("workouts")
     workouts = Workout.objects.prefetch_related("sub_muscle", "equipment")
 
-    logger.warning("EQUIPMENT: querysets constructed")
 
     equip_submuscle = workouts.values_list("equipment__id", "sub_muscle__id")
 
     equipment_data = {}
-    try:
-        for pair in equip_submuscle:
-            equip = pair[0]
-            submuscle = pair[1]
-            if(equip in equipment_data):
-                equipment_data.get(equip).append(submuscle)
-            else:
-                equipment_data[equip] = [submuscle]
-    except Exception:
-        logger.exception("EQUIPMENT: query evaluation failed")
-        raise
-    logger.warning("EQUIPMENT: query evaluation succeeded")
+    for pair in equip_submuscle:
+        equip = pair[0]
+        submuscle = pair[1]
+        if(equip in equipment_data):
+            equipment_data.get(equip).append(submuscle)
+        else:
+            equipment_data[equip] = [submuscle]
 
     if request.user.is_authenticated:
         user_equipments = list(Profile.objects.get(user = request.user).equipment_ids)
