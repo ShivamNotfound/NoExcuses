@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 if ENVIRONMENT == 'development':
-    INSTALLED_APPS += 'silk'
+    INSTALLED_APPS += ['silk']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -65,11 +65,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    #'silk.middleware.SilkyMiddleware',
 ]
 if ENVIRONMENT == "development":
-    MIDDLEWARE += 'silk.middleware.SilkyMiddleware'
-
+    MIDDLEWARE += ['silk.middleware.SilkyMiddleware']
 ROOT_URLCONF = 'ne_project.urls'
 
 TEMPLATES = [
