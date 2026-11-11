@@ -1,0 +1,16 @@
+name: Keep Website Alive
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping website
+        run: |
+          curl --fail --silent --show-error \
+            https://noexcuses-qjae.onrender.com/select_equipment/
